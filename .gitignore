@@ -3,4 +3,5 @@ app/coverage/
 **/dist/
 .coverdata/
 .idea/
+.coverrun
 

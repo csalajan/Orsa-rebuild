@@ -1,0 +1,11 @@
+instrumentation:
+    root: .
+    default-excludes: true
+    excludes:
+        - karma.conf.js
+        - gulpfile.*
+        - Gulpfile.*
+        - Gruntfile.*
+        - gruntfile.*
+        - **/*.spec.js
+    include-all-sources: true

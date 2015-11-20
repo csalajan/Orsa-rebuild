@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>{{$root.COMMON.APP_NAME}}</title>
+    <link rel="stylesheet"  href="styles/dist/font-awesome.min.css" />
+    <link rel="stylesheet"  href="styles/dist/production.css" />
+    <base href="/tournament/">
+</head>
+<body>
+    <div my-header user="user"></div>
+    <div slider id="slider1" class="slider"></div>
+    <div class="divider"></div>
+    <div class="container">
+        <div id="mid-container" class="row">
+            <div id="content" class="col-md-8">
+
+
+
+                <!-- Render JavaScript alerts here -->
+                <div class="alert-area"></div>
+
+                <div ng-view></div>
+            </div>
+
+            <div sidebar id="sidebar" class="col-md-4"></div>
+        </div>
+    </div>
+    <div my-footer></div>
+    <script src="app/dist/production.js"></script>
+</body>
+</html>

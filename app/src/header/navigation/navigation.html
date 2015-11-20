@@ -1,0 +1,14 @@
+<nav>
+    <div class="container">
+        <div class="widget-navigation-default widget-navigation">
+            <ul class="list-inline">
+                <li class="icon" ng-if="!footer">
+                    <i class="fa fa-bars"></i>
+                </li>
+                <li class="item-level-0" ng-repeat="item in navigation">
+                    <a href="{{item.url}}">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
