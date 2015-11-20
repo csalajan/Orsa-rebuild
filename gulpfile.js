@@ -5,6 +5,7 @@ var minify = require('gulp-minify');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var sass = require('gulp-sass');
+var watch = require('gulp-watch');
 
 /**
  * Run test once and exit
@@ -49,3 +50,15 @@ gulp.task('sass', function () {
 gulp.task('test', ['karma']);
 
 gulp.task('build', ['karma', 'sass', 'scripts']);
+
+gulp.task('watch', function() {
+   gulp.watch([
+       'styles/src/*.scss',
+       'arr/src/**/*.scss'
+   ], ['sass']);
+
+    gulp.watch([
+        'app/src/**/*.js',
+        '!app/src/**/*.spec.js'
+    ], ['scripts']);
+});
