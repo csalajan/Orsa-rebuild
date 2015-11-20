@@ -1,0 +1,6 @@
+node_modules/
+app/coverage/
+**/dist/
+.coverdata/
+.idea/
+
