@@ -14,7 +14,7 @@ gulp.task('lint', function() {
 
 gulp.task('scripts', ['lint'], function() {
     return gulp.src(config.files)
-        .pipe(replace('"VIEW_PATH": "src/app/"', '"VIEW_PATH": "views"'))
+        .pipe(replace('"VIEW_PATH": "src/app"', '"VIEW_PATH": "views"'))
         .pipe(concat('production.js'))
         .pipe(minify())
         .pipe(gulp.dest(config.destination));

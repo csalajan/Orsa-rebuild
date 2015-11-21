@@ -1,15 +1,9 @@
 var UserService = function(ApiFactory) {
     var user;
 
-    this.login = function(username, password) {
+    this.login = function(username, password, callback) {
         ApiFactory.postData("/user/login", {username: username, password: password})
-            .then(function(response) {
-                console.log('In THEN');
-                //if (response.status == 200) {
-                    ApiFactory.setToken(response.data.token);
-                    user = response.data;
-                //}
-            });
+            .then(callback);
     };
 };
 

@@ -6,6 +6,7 @@ var root = 'C:\\Users\\Craig\\projects\\tournament\\';
 module.exports = {
     development: {
         index: 'index.html',
+        htaccess: '.htaccess',
         root: development
     },
     production: {

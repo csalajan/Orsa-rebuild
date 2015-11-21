@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var config = require('../../config');
 
 gulp.task('index', function() {
-    return gulp.src(config.development.index)
+    return gulp.src([config.development.index, config.development.htaccess])
         .pipe(gulp.dest(config.development.root));
 });
 

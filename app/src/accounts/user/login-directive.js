@@ -5,17 +5,18 @@ var UserLogin = function(common, UserService) {
           user: '=user'
         },
         link: function(scope) {
-            scope.user = {
-                loggedIn: false
-            };
 
             scope.showLogin = function() {
                 console.log('it works');
             };
 
             scope.login = function() {
-                UserService.login("test", "test");
-            }
+                UserService.login("test", "test", handleLogin);
+            };
+
+            var handleLogin = function(response) {
+
+            };
         }
     };
 };

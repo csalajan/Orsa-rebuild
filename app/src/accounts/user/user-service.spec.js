@@ -12,8 +12,11 @@ describe('User Service', function() {
 
 
     it('is true', function() {
-        userService.login("test", "test");
+        userService.login("test", "test", function(response) {
+            console.log(response);
+            expect(response.status).toEqual(200);
+        });
 
-        expect(true).toBe(true);
+
     });
 });

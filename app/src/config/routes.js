@@ -3,11 +3,11 @@ angular.module('app').config(function($routeProvider, $locationProvider, COMMON)
         .when('/', {
             templateUrl : COMMON.VIEW_PATH + '/home/home.html',
             controller : "HomeController"
+        })
+        .when('/register', {
+            templateUrl : COMMON.VIEW_PATH + '/accounts/registration/register.html',
+            controller : "RegistrationController"
         });
-    //    .when('/about', {
-    //        templateUrl : 'partials/about.html',
-    //        controller : mainController
-    //    })
     //    .when('/contact', {
     //        templateUrl : 'partials/contact.html',
     //        controller : mainController
