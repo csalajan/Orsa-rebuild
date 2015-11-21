@@ -1,5 +1,7 @@
 $primaryColor: #00afff;
 $secondaryColor: #090a0c;
+$secondaryColor-light: lighten(desaturate(adjust-hue($secondaryColor, 0.0000), 6.1776), 3.1373);
+$secondaryColor-lighter: lighten(desaturate(adjust-hue($secondaryColor, -14.2857), 4.4266), 9.8039);
 
 /*
  * Mainlayout

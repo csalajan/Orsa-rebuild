@@ -1,7 +1,7 @@
 #footer .links {
   margin-top: 40px;
   padding: 40px 0px;
-  background-color: lighten(desaturate(adjust-hue($secondaryColor, 0.0000), 6.1776), 3.1373);
+  background-color: $secondaryColor-light;
   color: $primaryColor;
   font-weight: bold;
   text-transform: uppercase;
@@ -11,7 +11,7 @@
 }
 #footer .more {
   padding: 40px 0px;
-  background-color: lighten(desaturate(adjust-hue($secondaryColor, -14.2857), 4.4266), 9.8039);
+  background-color: $secondaryColor-lighter;
 }
 #footer .more .info a {
   color: #ffffff;

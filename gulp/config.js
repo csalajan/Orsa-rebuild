@@ -27,6 +27,7 @@ module.exports = {
         files: [
             'node_modules/angular/angular.js',
             'node_modules/angular-route/angular-route.js',
+            'node_modules/angular-messages/angular-messages.js',
             'app/src/app.js',
             'app/src/**/*.js',
             '!app/src/**/*.spec.js'

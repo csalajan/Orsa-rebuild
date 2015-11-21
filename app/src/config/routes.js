@@ -1,4 +1,4 @@
-angular.module('app').config(function($routeProvider, $locationProvider, COMMON) {
+angular.module('app').config(function($routeProvider, $locationProvider, COMMON, $httpProvider) {
     $routeProvider
         .when('/', {
             templateUrl : COMMON.VIEW_PATH + '/home/home.html',
@@ -15,6 +15,8 @@ angular.module('app').config(function($routeProvider, $locationProvider, COMMON)
 
     // use the HTML5 History API
     $locationProvider.html5Mode(true);
+
+    $httpProvider.interceptors.push('AuthInterceptor');
 }).run(function($rootScope, COMMON) {
     $rootScope.COMMON = COMMON;
 });

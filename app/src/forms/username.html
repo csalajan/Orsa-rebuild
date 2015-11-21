@@ -1,0 +1,18 @@
+<div class="form-group ">
+    <label for="username" class="col-sm-3 control-label">Username</label>
+    <div class="col-sm-9">
+        <input name="username"
+               type="text"
+               id="username"
+               ng-model="model"
+               ng-minlength="3"
+               ng-maxlength="20"
+               required />
+    </div>
+</div>
+
+<div ng-messages="formName.username.$error" class="help-block text-right">
+    <p ng-message="minlength">Username must be at least 3 characters long</p>
+    <p ng-message="maxlength">Username can not be longer than 20 characters</p>
+    <p ng-message="required">Username is required</p>
+</div>
