@@ -1,0 +1,14 @@
+<article class="news" ng-repeat="article in articles">
+    <header>
+        <h2>{{article.title}}</h2>
+        <span><time>{{article.submittedOn}}</time> written by <a href="http://www.nexientchampionshipseries.com/users/2/thef">{{article.author.username}}</a></span>
+    </header>
+
+    <div class="content">
+        <div class="summary" ng-bind-html="article.summary | rawHtml">
+        </div>
+    </div>
+    <div class="meta">
+        {{article.comments}} Comments - <a href="http://www.nexientchampionshipseries.com/news/1/nexient-championship-series-registration">Read more...</a>
+    </div>
+</article>

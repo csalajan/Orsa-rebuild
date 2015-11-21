@@ -1,4 +1,6 @@
 require('./login-directive.js');
+require('../../utils/api-factory.js');
+require('./user-service.js');
 
 describe('Login Directive', function() {
     var $compile,
