@@ -1,0 +1,37 @@
+#sidebar {
+  padding-left: 20px;
+  border-left: 1px solid #111214;
+}
+#sidebar .border {
+  padding: 20px;
+  background-color: #111214;
+}
+#sidebar h3 {
+  margin: 0px;
+  padding: 10px 20px;
+  border-bottom: 4px solid #004666;
+  background-color: $primaryColor;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#sidebar h3 a {
+  float: right;
+  color: #004666;
+}
+#sidebar h3 a:hover {
+  transform: scale(1.5);
+  transition: all 0.08s linear;
+}
+#sidebar .widget {
+  line-height: 40px;
+}
+#sidebar .widget li {
+  margin: 2px 0px;
+  padding: 0px 10px;
+  background-color: #0c0d0e;
+}
+#sidebar .widget li:hover {
+  background-color: #080809;
+}

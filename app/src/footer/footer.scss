@@ -1,0 +1,65 @@
+#footer .links {
+  margin-top: 40px;
+  padding: 40px 0px;
+  background-color: lighten(desaturate(adjust-hue($secondaryColor, 0.0000), 6.1776), 3.1373);
+  color: $primaryColor;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#footer .links a {
+  padding: 10px;
+}
+#footer .more {
+  padding: 40px 0px;
+  background-color: lighten(desaturate(adjust-hue($secondaryColor, -14.2857), 4.4266), 9.8039);
+}
+#footer .more .info a {
+  color: #ffffff;
+}
+#footer .more .stats {
+  display: inline-block;
+  margin-left: 10px;
+  color: #4e585f;
+  font-weight: bold;
+}
+#footer .more .stats span {
+  font-weight: normal;
+}
+#footer .more .stats:before {
+  content: '-';
+  margin-right: 10px;
+}
+#footer .more .right {
+  float: right;
+}
+#footer .more .right a {
+  display: inline-block;
+  padding: 0px 10px;
+  color: #373e43;
+}
+#footer .more .right a:hover {
+  transform: scale(1.5);
+  transition: all 0.08s linear;
+}
+@media (max-width: 990px) {
+  #footer {
+    text-align: center;
+  }
+  #footer .links {
+    padding: 40px 0px 0px 0px;
+  }
+  #footer .links li {
+    margin-bottom: 20px;
+  }
+  #footer .more .stats {
+    display: block;
+    margin-top: 20px;
+  }
+  #footer .more .stats:before {
+    display: none;
+  }
+  #footer .more .right {
+    float: none;
+    margin-top: 20px;
+  }
+}

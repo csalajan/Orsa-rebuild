@@ -10,7 +10,7 @@ gulp.task('dependencies', function() {
 
 gulp.task('styles', ['dependencies'], function () {
     return gulp.src(config.files)
-        .pipe(sass({errLogToConsole: true}))
         .pipe(concat('production.css'))
+        .pipe(sass().on('error',sass.logError))
         .pipe(gulp.dest(config.destination));
 });

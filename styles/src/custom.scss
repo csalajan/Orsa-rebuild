@@ -1,0 +1,25 @@
+$primaryColor: #00afff;
+$secondaryColor: #090a0c;
+
+/*
+ * Mainlayout
+ */
+body {
+  background-color: $secondaryColor;
+  font-family: 'Titillium Web';
+  color: white;
+}
+.widget-auth-logged-in a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #373e43;
+  color: #4e585f;
+}
+
+.divider {
+  height: 4px;
+  margin-bottom: 20px;
+  background-color: $primaryColor;
+}
+
+

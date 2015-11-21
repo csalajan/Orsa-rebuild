@@ -1,0 +1,121 @@
+#header .top-bar {
+  height: 80px;
+  padding: 25px 0px;
+}
+#header .top-bar .header-logo {
+  margin: 0px 20px;
+}
+#header .top-bar img {
+  max-height: 30px;
+}
+#header .top-bar .right {
+  float: right;
+  padding-top: 0px;
+}
+#header nav {
+  background-color: lighten(desaturate(adjust-hue($secondaryColor, -14.2857), 4.4266), 9.8039);
+  border-top: 1px solid lighten(desaturate(adjust-hue($secondaryColor, -15.0000), 4.4496), 19.8039);
+  border-bottom: 4px solid lighten(desaturate(adjust-hue($secondaryColor, -16.0000), 4.4818), 5.8824);
+}
+#header nav .container {
+  position: relative;
+}
+#header nav ul {
+  margin: 10px 0px;
+  border-left: 1px solid #373e43;
+}
+#header nav a {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  padding: 0px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#header nav li a:before {
+  content: ' ';
+  display: none;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0px;
+  height: 2px;
+  background-color: $primaryColor;
+}
+#header nav li a.active:before,
+#header nav li:hover a:before {
+  display: block;
+}
+#header nav li.icon {
+  margin-left: 20px;
+  color: #373e43;
+}
+#header nav .right {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+#header nav .right a {
+  color: #373e43;
+}
+#header nav .right a:hover {
+  transform: scale(1.5);
+  transition: all 0.08s linear;
+}
+@media (min-width: 991px) {
+  #header nav ul {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+  }
+  #header nav ul > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media (max-width: 990px) {
+  #header .top-bar {
+    height: auto;
+    text-align: center;
+  }
+  #header .top-bar .right {
+    float: none;
+    padding-top: 20px;
+  }
+  #header nav ul {
+    padding-left: 0;
+    list-style: none;
+    border: none;
+  }
+  #header nav ul .icon {
+    cursor: pointer;
+  }
+  #header nav ul a {
+    display: none;
+    height: 40px;
+    line-height: 40px;
+  }
+  #header nav ul li a:before {
+    display: none !important;
+  }
+  #header nav ul li:not(.icon):hover {
+    background-color: #373e43;
+  }
+  #header nav .right {
+    display: none;
+  }
+  #header nav.max a {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  #header .right {
+    padding-top: 0px;
+  }
+  #header .right a {
+    margin-top: 20px;
+  }
+}
