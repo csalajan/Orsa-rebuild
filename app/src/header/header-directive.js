@@ -1,6 +1,6 @@
-var HeaderDirective = function() {
+var HeaderDirective = function(common) {
     return {
-        templateUrl: 'app/src/header/header.html',
+        templateUrl:  common.VIEW_PATH + '/header/header.html',
         scope: {
             user: '=user'
         },
@@ -10,4 +10,4 @@ var HeaderDirective = function() {
     };
 };
 
-angular.module('app').directive('myHeader', HeaderDirective);
+angular.module('app').directive('myHeader', ['COMMON', HeaderDirective]);

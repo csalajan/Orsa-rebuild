@@ -1,10 +1,10 @@
-var SidebarDirective = function() {
+var SidebarDirective = function(common) {
     return {
-        templateUrl: 'app/src/sidebar/sidebar.html',
+        templateUrl:  common.VIEW_PATH + '/sidebar/sidebar.html',
         link: function() {
 
         }
     };
 };
 
-angular.module('app').directive('sidebar', SidebarDirective);
+angular.module('app').directive('sidebar', ['COMMON', SidebarDirective]);

@@ -1,16 +1,16 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var minify = require('gulp-minify');
 var sass = require('gulp-sass');
-var config = require('../../config');
+var config = require('../../config').styles;
 
-gulp.task('styles', function () {
-    gulp.src(config.styles.files)
-        .pipe(sass().on('error', sass.logError))
+gulp.task('dependencies', function() {
+    return gulp.src(config.dependencies)
+        .pipe(gulp.dest(config.destination));
+});
+
+gulp.task('styles', ['dependencies'], function () {
+    return gulp.src(config.files)
+        .pipe(sass({errLogToConsole: true}))
         .pipe(concat('production.css'))
-        .pipe(minify())
-        .pipe(gulp.dest(config.styles.destination));
-
-    gulp.src(config.styles.dependencies)
-        .pipe(gulp.dest(config.styles.destination));
+        .pipe(gulp.dest(config.destination));
 });

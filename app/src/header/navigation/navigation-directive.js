@@ -1,6 +1,6 @@
-var NavigationDirective = function(navigationService) {
+var NavigationDirective = function(navigationService, common) {
     return {
-        templateUrl: 'app/src/header/navigation/navigation.html',
+        templateUrl:  common.VIEW_PATH + '/header/navigation/navigation.html',
         scope: {
             footer: '=footer'
         },
@@ -10,4 +10,4 @@ var NavigationDirective = function(navigationService) {
     };
 };
 
-angular.module('app').directive('navigation', ['navigationService', NavigationDirective]);
+angular.module('app').directive('navigation', ['navigationService', 'COMMON', NavigationDirective]);

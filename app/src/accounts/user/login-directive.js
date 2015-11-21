@@ -1,6 +1,6 @@
-var UserLogin = function() {
+var UserLogin = function(common) {
     return {
-        templateUrl: 'app/src/accounts/user/login.html',
+        templateUrl: common.VIEW_PATH + '/accounts/user/login.html',
         scope: {
           user: '=user'
         },
@@ -16,4 +16,4 @@ var UserLogin = function() {
     };
 };
 
-angular.module('app').directive('userLogin', UserLogin);
+angular.module('app').directive('userLogin', ['COMMON', UserLogin]);

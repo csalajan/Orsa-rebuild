@@ -1,10 +1,10 @@
-var FooterDirective = function() {
+var FooterDirective = function(common) {
     return {
-        templateUrl: 'app/src/footer/footer.html',
+        templateUrl:  common.VIEW_PATH + '/footer/footer.html',
         link: function() {
 
         }
     };
 };
 
-angular.module('app').directive('myFooter', FooterDirective);
+angular.module('app').directive('myFooter', ['COMMON', FooterDirective]);

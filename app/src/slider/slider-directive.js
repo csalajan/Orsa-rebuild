@@ -1,10 +1,10 @@
-var SliderDirective = function() {
+var SliderDirective = function(common) {
     return {
-        templateUrl: 'app/src/slider/slider.html',
+        templateUrl:  common.VIEW_PATH + '/slider/slider.html',
         link: function() {
 
         }
     };
 };
 
-angular.module('app').directive('slider', SliderDirective);
+angular.module('app').directive('slider', ['COMMON', SliderDirective]);

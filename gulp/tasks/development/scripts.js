@@ -3,15 +3,19 @@ var concat = require('gulp-concat');
 var minify = require('gulp-minify');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
-var config = require('../../config');
+var replace = require('gulp-replace');
+var config = require('../../config').scripts;
 
-gulp.task('scripts', function() {
-    gulp.src(config.scripts.jshint.files)
+gulp.task('lint', function() {
+    return gulp.src(config.jshint.files)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
+});
 
-    gulp.src(config.scripts.files)
+gulp.task('scripts', ['lint'], function() {
+    return gulp.src(config.files)
+        .pipe(replace('"VIEW_PATH": "src/app/"', '"VIEW_PATH": "views"'))
         .pipe(concat('production.js'))
         .pipe(minify())
-        .pipe(gulp.dest(config.scripts.destination));
+        .pipe(gulp.dest(config.destination));
 });

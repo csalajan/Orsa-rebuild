@@ -8,6 +8,9 @@ module.exports = {
         index: 'index.html',
         root: development
     },
+    production: {
+        viewPath: 'views/'
+    },
     styles: {
         destination: development + '/css',
         files: [
@@ -47,5 +50,28 @@ module.exports = {
     },
     karma: {
         configFile:  root + 'karma.conf.js'
+    },
+    rsync: {
+        src: development,
+        options: {
+            destination: '~/ncs/dev',
+            root: development,
+            hostname: 'craig@craigsalajan.me',
+            incremental: true,
+            progress: true,
+            relative: true,
+            emptyDirectories: true,
+            recursive: true,
+            clean: true
+        }
+    },
+    sftp: {
+        src: development + '/**/*',
+        options: {
+            host: 'craigsalajan.me',
+            user: 'craig',
+            remotePath: '/home/craig/ncs/dev'
+
+        }
     }
 };
