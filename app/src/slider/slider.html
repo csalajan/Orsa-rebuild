@@ -1,8 +1,8 @@
 <div class="slides">
     <ul class="list-inline">
-        <li data-title="Nexient Championship Series - It's Gonna be Big!" style="display: block;">
-            <a href="https://www.toornament.com/tournaments/5643847f150ba00d568b4573/registration/new" title="Nexient Championship Series - It's Gonna be Big!" target="_blank" style="background-image: url('http://www.nexientchampionshipseries.com/uploads/slides/1_image.png')">
-                Nexient Championship Series - It's Gonna be Big!
+        <li ng-repeat="image in images" data-title="{{image.title}}" style="display: block;">
+            <a href="{{image.link}}" title="{{image.title}}" target="_blank" style="background-image: url('{{image.image}}')">
+                {{image.title}}
             </a>
         </li>
     </ul>

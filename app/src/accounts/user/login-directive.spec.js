@@ -45,7 +45,7 @@ describe('Login Directive', function() {
             var element = $compile("<div user-login></div>")($scope);
             $scope.$digest();
 
-        })
+        });
     });
 
     describe('User Is Logged In', function() {
