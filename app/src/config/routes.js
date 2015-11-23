@@ -7,11 +7,11 @@ angular.module('app').config(function($routeProvider, $locationProvider, COMMON,
         .when('/register', {
             templateUrl : COMMON.VIEW_PATH + '/accounts/registration/register.html',
             controller : "RegistrationController"
+        })
+        .when('/match/:id', {
+            templateUrl : COMMON.VIEW_PATH + '/tournament/matches/match.html',
+            controller : 'MatchController'
         });
-    //    .when('/contact', {
-    //        templateUrl : 'partials/contact.html',
-    //        controller : mainController
-    //    });
 
     // use the HTML5 History API
     $locationProvider.html5Mode(true);

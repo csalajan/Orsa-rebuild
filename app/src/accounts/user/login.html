@@ -1,4 +1,32 @@
 <div ng-if="!user.loggedIn" class="widget widget-auth-login">
-    <span class="btn btn-default" ng-click="showLogin()">Login</span>
+    <span class="btn btn-default dropdown-toggle" ng-click="toggleLogin()">Login</span>
+    <ul class="dropdown-menu login-widget">
+        <form ng-submit="login(loginUser)">
+            <li>
+                <div class="form-group ">
+                    <label for="login-username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input name="login-username"
+                               type="text"
+                               id="login-username"
+                               ng-model="loginUser.username" />
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="form-group ">
+                    <label for="login-password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input name="login-password"
+                               type="password"
+                               id="login-password"
+                               ng-model="loginUser.password" />
+                    </div>
+                </div>
+            </li>
+            <li class="login-button"><button type="submit" class="btn btn-default">Login</button></li>
+        </form>
+    </ul>
     <a class="btn btn-default" ng-href="/register">Register</a>
 </div>

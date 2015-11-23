@@ -5,13 +5,20 @@ var UserLogin = function(common, UserService) {
           user: '=user'
         },
         link: function(scope) {
-
-            scope.showLogin = function() {
-                console.log('it works');
+            scope.loginUser = {};
+            scope.toggleLogin = function() {
+                var dropdown = document.getElementsByClassName('dropdown-menu')[0];
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                } else {
+                    dropdown.style.display = 'block';
+                }
             };
 
-            scope.login = function() {
-                UserService.login("test", "test", handleLogin);
+            scope.login = function(loginUser) {
+                console.log(loginUser);
+                UserService.login("test", "test");
+                scope.toggleLogin();
             };
 
             var handleLogin = function(response) {

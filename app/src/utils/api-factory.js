@@ -23,7 +23,7 @@ var ApiFactory = function($http, $q) {
             var defered = $q.defer();
             $http.post(url + api, data)
                 .success(function(response) {
-                    defered.resolve(response)
+                    defered.resolve(response);
                 })
                 .error(function() {
                     defered.reject();

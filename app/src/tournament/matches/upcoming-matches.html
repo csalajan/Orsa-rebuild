@@ -1,0 +1,15 @@
+<h3>Upcoming Match</h3>
+<div class="widget widget-matches-featured">
+    <ul class="list-unstyled">
+        <li ng-repeat="match in matches">
+            <a href="/match/{{match.id}}">
+                <span class="blue-team">{{match.blueTeam.name}}</span>
+                <span class="red-team">vs {{match.redTeam.name}}</span>
+                <div>
+                    <small class="tournament">Test Tourny</small> -
+                    <small class="date">2015-11-14</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

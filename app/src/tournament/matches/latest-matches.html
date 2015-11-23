@@ -1,0 +1,17 @@
+<h3>Latest Matches</h3>
+<div class="widget widget-matches-latest">
+    <ul class="list-unstyled">
+        <li ng-repeat="match in matches">
+            <a href="/match/{{match.id}}">
+                <img src="http://dev.nexientchampionshipseries.com/uploads/games/default/lol.png" width="16" height="16" alt="League of Legends">
+                <span class="blue-team">{{match.blueTeam.name}}</span>
+                <span class="red-team">vs {{match.redTeam.name}}</span>
+                <span class="scores"><span class="blue-draw"><span class="draw">00</span>:<span class="draw">00</span></span></span>
+                <div>
+                    <small class="tournament">Test Tourny</small> -
+                    <small class="date">2015-11-14</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
