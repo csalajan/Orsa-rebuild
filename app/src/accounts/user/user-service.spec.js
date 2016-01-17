@@ -3,7 +3,7 @@ require('./user-service.js');
 describe('User Service', function() {
     var userService, $http, $q;
 
-    beforeEach(angular.mock.module("app"));
+    beforeEach(angular.mock.module('ncs'));
 
     beforeEach(inject(function(_UserService_, $httpBackend, _$q_) {
         userService = _UserService_;

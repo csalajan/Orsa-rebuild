@@ -10,4 +10,4 @@ var SliderDirective = function(common) {
     };
 };
 
-angular.module('app').directive('slider', ['COMMON', SliderDirective]);
+angular.module('ncs').directive('slider', ['COMMON', SliderDirective]);

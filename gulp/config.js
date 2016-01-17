@@ -7,7 +7,14 @@ module.exports = {
     development: {
         index: 'index.html',
         htaccess: '.htaccess',
-        root: development
+        root: development,
+        documentation: {
+            files: [
+                'app/src/**/*.js',
+                '!app/src/**/*.spec.js'
+            ],
+            destination: 'documentation'
+        }
     },
     production: {
         viewPath: 'views/'

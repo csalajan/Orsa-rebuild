@@ -13,4 +13,4 @@ var AppController = function($scope, PageService) {
     init();
 };
 
-angular.module('app').controller('AppController', ['$scope', 'PageService', AppController]);
+angular.module('ncs').controller('AppController', ['$scope', 'PageService', AppController]);

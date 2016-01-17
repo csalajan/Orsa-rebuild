@@ -28,4 +28,4 @@ var UserLogin = function(common, UserService) {
     };
 };
 
-angular.module('app').directive('userLogin', ['COMMON', 'UserService', UserLogin]);
+angular.module('ncs').directive('userLogin', ['COMMON', 'UserService', UserLogin]);

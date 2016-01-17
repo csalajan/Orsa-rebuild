@@ -7,4 +7,4 @@ var LatestMatchesDirective = function(common, TournamentService) {
     };
 };
 
-angular.module('app').directive('latestMatches', ['COMMON', 'TournamentService', LatestMatchesDirective]);
+angular.module('ncs').directive('latestMatches', ['COMMON', 'TournamentService', LatestMatchesDirective]);

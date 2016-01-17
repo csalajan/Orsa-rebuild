@@ -18,4 +18,4 @@ var PageService = function(ApiFactory, $q) {
 
 };
 
-angular.module('app').service('PageService', ['ApiFactory', '$q', PageService]);
+angular.module('ncs').service('PageService', ['ApiFactory', '$q', PageService]);

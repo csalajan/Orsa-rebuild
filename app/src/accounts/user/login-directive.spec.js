@@ -13,7 +13,7 @@
 //        username: 'test'
 //    };
 //
-//    beforeEach(angular.mock.module("app"));
+//    beforeEach(angular.mock.module('ncs'));
 //
 //    // Store references to $rootScope and $compile
 //    // so they are available to all tests in this describe block

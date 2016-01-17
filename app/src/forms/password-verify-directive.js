@@ -12,4 +12,4 @@ var PasswordVerifyDirective = function(common) {
     };
 };
 
-angular.module('app').directive('vpassword', ['COMMON', PasswordVerifyDirective]);
+angular.module('ncs').directive('vpassword', ['COMMON', PasswordVerifyDirective]);

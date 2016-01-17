@@ -17,4 +17,4 @@ var compareTo = function() {
     };
 };
 
-angular.module('app').directive("compareTo", compareTo);
+angular.module('ncs').directive("compareTo", compareTo);

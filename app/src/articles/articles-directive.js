@@ -10,4 +10,4 @@ var ArticlesDirective = function(common) {
     };
 };
 
-angular.module('app').directive('articles', ['COMMON', ArticlesDirective]);
+angular.module('ncs').directive('articles', ['COMMON', ArticlesDirective]);

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+apt-get update
+apt-get install -y python-software-properties python g++ make
+add-apt-repository -y ppa:chris-lea/node.js
+apt-get update
+apt-get install -y nodejs
+
+
+# nginx
+sudo apt-get -y install nginx
+sudo service nginx start
+
+# set up nginx server
+sudo cp /vagrant/provision/config/nginx.conf /etc/nginx/sites-available/site.conf
+sudo chmod 644 /etc/nginx/sites-available/site.conf
+sudo ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/site.conf
+sudo service nginx restart
+
+# clean /var/www
+sudo rm -Rf /var/www
+
+# symlink /var/www => /vagrant
+ln -s /vagrant /var/www

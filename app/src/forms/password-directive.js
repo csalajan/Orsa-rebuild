@@ -11,4 +11,4 @@ var PasswordDirective = function(common) {
     };
 };
 
-angular.module('app').directive('password', ['COMMON', PasswordDirective]);
+angular.module('ncs').directive('password', ['COMMON', PasswordDirective]);

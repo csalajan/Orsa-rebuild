@@ -81,4 +81,4 @@ var TournamentService = function(ApiFactory) {
     };
 };
 
-angular.module('app').service('TournamentService', ['ApiFactory', TournamentService]);
+angular.module('ncs').service('TournamentService', ['ApiFactory', TournamentService]);

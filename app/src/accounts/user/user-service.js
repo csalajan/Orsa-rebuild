@@ -16,4 +16,4 @@ var UserService = function(ApiFactory) {
     };
 };
 
-angular.module('app').service('UserService', ['ApiFactory', UserService]);
+angular.module('ncs').service('UserService', ['ApiFactory', UserService]);

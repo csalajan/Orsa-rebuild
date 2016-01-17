@@ -7,4 +7,4 @@ var UpcomingMatchesDirective = function(common, TournamentService) {
     };
 };
 
-angular.module('app').directive('upcomingMatches', ['COMMON', 'TournamentService', UpcomingMatchesDirective]);
+angular.module('ncs').directive('upcomingMatches', ['COMMON', 'TournamentService', UpcomingMatchesDirective]);

@@ -3,4 +3,4 @@ var common = {
     "VIEW_PATH": "src/app"
 };
 
-angular.module('app').constant('COMMON', common);
+angular.module('ncs').constant('COMMON', common);

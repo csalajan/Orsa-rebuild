@@ -5,3 +5,4 @@ app/coverage/
 .idea/
 .coverrun
 build/
+.vagrant/

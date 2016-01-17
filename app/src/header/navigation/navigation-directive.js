@@ -10,4 +10,4 @@ var NavigationDirective = function(navigationService, common) {
     };
 };
 
-angular.module('app').directive('navigation', ['navigationService', 'COMMON', NavigationDirective]);
+angular.module('ncs').directive('navigation', ['navigationService', 'COMMON', NavigationDirective]);

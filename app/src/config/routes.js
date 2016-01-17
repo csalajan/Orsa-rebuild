@@ -1,4 +1,4 @@
-angular.module('app').config(function($routeProvider, $locationProvider, COMMON, $httpProvider) {
+angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON, $httpProvider) {
     $routeProvider
         .when('/', {
             templateUrl : COMMON.VIEW_PATH + '/home/home.html',

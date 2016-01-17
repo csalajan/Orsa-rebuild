@@ -1,1 +1,1 @@
-angular.module('app', ['ngRoute', 'ngMessages']);
+angular.module('ncs', ['ngRoute', 'ngMessages']);

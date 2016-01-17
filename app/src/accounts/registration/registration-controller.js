@@ -7,4 +7,4 @@ var RegistrationController = function($scope, UserService) {
     };
 };
 
-angular.module('app').controller("RegistrationController", RegistrationController);
+angular.module('ncs').controller("RegistrationController", RegistrationController);

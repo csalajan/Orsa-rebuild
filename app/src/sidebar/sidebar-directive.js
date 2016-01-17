@@ -7,4 +7,4 @@ var SidebarDirective = function(common) {
     };
 };
 
-angular.module('app').directive('sidebar', ['COMMON', SidebarDirective]);
+angular.module('ncs').directive('sidebar', ['COMMON', SidebarDirective]);

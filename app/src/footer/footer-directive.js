@@ -7,4 +7,4 @@ var FooterDirective = function(common) {
     };
 };
 
-angular.module('app').directive('myFooter', ['COMMON', FooterDirective]);
+angular.module('ncs').directive('myFooter', ['COMMON', FooterDirective]);

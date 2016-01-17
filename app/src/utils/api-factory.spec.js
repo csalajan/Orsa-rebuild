@@ -3,7 +3,7 @@ require('./api-factory.js');
 describe('Api Factory', function() {
     var ApiFactory, $q, $rootScope, defered, $http;
 
-    beforeEach(angular.mock.module("app"));
+    beforeEach(angular.mock.module('ncs'));
 
     beforeEach(inject(function(_ApiFactory_, _$q_, _$rootScope_, $httpBackend) {
         ApiFactory = _ApiFactory_;

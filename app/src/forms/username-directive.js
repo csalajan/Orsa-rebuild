@@ -11,4 +11,4 @@ var UsernameDirective = function(common) {
     };
 };
 
-angular.module('app').directive('username', ['COMMON', UsernameDirective]);
+angular.module('ncs').directive('username', ['COMMON', UsernameDirective]);

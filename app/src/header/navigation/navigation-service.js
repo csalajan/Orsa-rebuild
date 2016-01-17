@@ -9,4 +9,4 @@ var NavigationService = function() {
     };
 };
 
-angular.module('app').service('navigationService', NavigationService);
+angular.module('ncs').service('navigationService', NavigationService);

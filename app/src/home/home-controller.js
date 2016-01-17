@@ -26,4 +26,4 @@ var HomeController = function($scope) {
     ];
 };
 
-angular.module('app').controller('HomeController', HomeController);
+angular.module('ncs').controller('HomeController', HomeController);

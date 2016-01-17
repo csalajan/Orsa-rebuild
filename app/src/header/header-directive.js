@@ -10,4 +10,4 @@ var HeaderDirective = function(common) {
     };
 };
 
-angular.module('app').directive('myHeader', ['COMMON', HeaderDirective]);
+angular.module('ncs').directive('myHeader', ['COMMON', HeaderDirective]);

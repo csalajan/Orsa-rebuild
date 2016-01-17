@@ -11,4 +11,4 @@ var EmailDirective = function(common) {
     };
 };
 
-angular.module('app').directive('email', ['COMMON', EmailDirective]);
+angular.module('ncs').directive('email', ['COMMON', EmailDirective]);

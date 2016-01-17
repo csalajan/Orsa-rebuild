@@ -9,13 +9,16 @@
   "author": "Craig Salajan",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.4.7"
+    "angular": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "angular-messages": "^1.4.8"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.7",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^1.12.0",
+    "gulp-markdox": "^0.1.1",
     "gulp-minify": "0.0.5",
     "gulp-replace": "^0.5.4",
     "gulp-rsync": "0.0.5",

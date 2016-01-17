@@ -16,4 +16,4 @@ var AuthInterceptor =  function ($rootScope, $q, $window) {
     };
 };
 
-angular.module('app').factory('AuthInterceptor', ['$rootScope', '$q', '$window', AuthInterceptor]);
+angular.module('ncs').factory('AuthInterceptor', ['$rootScope', '$q', '$window', AuthInterceptor]);

@@ -10,7 +10,7 @@ describe('Navigation Service', function() {
         }
     ];
 
-    beforeEach(angular.mock.module("app"));
+    beforeEach(angular.mock.module('ncs'));
 
     beforeEach(inject(function (_navigationService_) {
         navigationService = _navigationService_;
