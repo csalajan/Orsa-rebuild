@@ -1,6 +1,7 @@
 var express = require('express');
 var toornamentWrapper = require('../wrappers/toornament/Toornament');
 var router = express.Router();
+var articles = require('../models/Article');
 var config = require('../config/config.json');
 
 var toornament = new toornamentWrapper({
@@ -56,6 +57,16 @@ router.get('/matches/latest', function(req, res, next) {
           })
           .slice(-5));
     }
+  })
+});
+
+router.get('/articles', function(req, res, next) {
+
+  articles.findAll({
+    limit: 10,
+    order: [['id', 'DESC']]
+  }).then(function(data) {
+    res.json(data);
   })
 });
 
