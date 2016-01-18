@@ -18,9 +18,9 @@ module.exports = {
     },
     api: {
         files: [
-            'api/**/*.*'
+            'api/**/*'
         ],
-        destination: build + '/api'
+        destination: build
     },
     production: {
         viewPath: 'views/'

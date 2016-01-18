@@ -1,9 +1,11 @@
 <section class="page page-groups">
     <div class="group col-sm-5 col-sm-offset-1" ng-repeat="group in groups">
         <h3>{{group.name}}</h3>
-        <div ng-repeat="player in group.ranking">
-            <span ng-if="player.participant">{{player.participant.name }} : {{player.points}}</span>
-        </div>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="player in group.ranking" ng-if="player.participant">
+                <span>{{$index + 1}}. {{player.participant.name }} <span class="pull-right">{{player.points}}</span></span>
+            </li>
+        </ul>
     </div>
     <div class="clearfix"></div>
 </section>
