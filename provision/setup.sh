@@ -22,3 +22,8 @@ sudo rm -Rf /var/www
 
 # symlink /var/www => /vagrant
 ln -s /vagrant /var/www
+
+
+sudo npm install -g nodemon
+
+nodemon /vagrant/build/api/bin/www

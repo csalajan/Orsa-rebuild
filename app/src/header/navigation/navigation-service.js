@@ -4,6 +4,10 @@ var NavigationService = function() {
             {
                 name: 'home',
                 url: '/'
+            },
+            {
+                name: 'groups',
+                url: '/groups'
             }
         ];
     };

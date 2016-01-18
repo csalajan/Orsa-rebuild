@@ -4,7 +4,7 @@
  */
 
 var ApiFactory = function($http, $q) {
-    var url = "";
+    var url = "/api";
     var AuthToken = "";
 
     return {

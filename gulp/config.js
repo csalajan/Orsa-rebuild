@@ -1,4 +1,4 @@
-var build = '/build';
+var build = 'build';
 var development = 'build/development';
 var production = 'build/production';
 var root = 'C:\\Users\\Craig\\projects\\tournament\\';
@@ -15,6 +15,12 @@ module.exports = {
             ],
             destination: 'documentation'
         }
+    },
+    api: {
+        files: [
+            'api/**/*.*'
+        ],
+        destination: build + '/api'
     },
     production: {
         viewPath: 'views/'

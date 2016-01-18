@@ -11,6 +11,10 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
         .when('/match/:id', {
             templateUrl : COMMON.VIEW_PATH + '/tournament/matches/match.html',
             controller : 'MatchController'
+        })
+        .when('/groups', {
+            templateUrl : COMMON.VIEW_PATH + '/tournament/groups/groups.html',
+            controller: 'GroupsController'
         });
 
     // use the HTML5 History API

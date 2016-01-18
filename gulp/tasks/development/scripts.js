@@ -4,6 +4,7 @@ var minify = require('gulp-minify');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var replace = require('gulp-replace');
+var watch = require('gulp-watch');
 var config = require('../../config').scripts;
 
 gulp.task('lint', function() {
@@ -18,4 +19,8 @@ gulp.task('scripts', ['lint'], function() {
         .pipe(concat('production.js'))
         .pipe(minify())
         .pipe(gulp.dest(config.destination));
+});
+
+gulp.task('scripts:watch', function() {
+    gulp.watch(config.files, ['scripts']);
 });

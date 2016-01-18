@@ -1,4 +1,4 @@
-node_modules/
+**/node_modules/
 app/coverage/
 **/dist/
 .coverdata/
@@ -6,3 +6,4 @@ app/coverage/
 .coverrun
 build/
 .vagrant/
+api/config/config.json

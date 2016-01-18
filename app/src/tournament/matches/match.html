@@ -6,8 +6,13 @@
             <img src="http://dev.nexientchampionshipseries.com/img/logo_180.png" alt="Test 1">
             <div class="team-name">
                 <img src="http://dev.nexientchampionshipseries.com/uploads/countries/eu.png">
-                {{match.blueTeam.name}}
+                {{match.opponents[0].participant.name}}
             </div>
+            <div class="result">
+                <span ng-if="match.opponents[0].result"
+                        ng-class="(match.opponents[0].result == 1) ? 'victory' : 'defeat'">{{matchResult[match.opponents[0].result]}}</span>
+            </div>
+
         </div>
         <div class="mid">
             <span class="blue-draw"><span class="draw">00</span>:<span class="draw">00</span></span>
@@ -15,31 +20,35 @@
         <div class="red">
             <img src="http://dev.nexientchampionshipseries.com/theme/no_opponent.jpg" alt="Test 2">
             <div class="team-name">
-                {{match.redTeam.name}}
+                {{match.opponents[1].participant.name}}
+            </div>
+            <div class="result">
+                <span ng-if="match.opponents[1].result"
+                      ng-class="(match.opponents[1].result == 1) ? 'victory' : 'defeat'">{{matchResult[match.opponents[1].result]}}</span>
             </div>
         </div>
     </div>
     <div class="details">
         <table class="table horizontal">
             <tbody>
-            <tr>
-                <th>Date</th>
-                <td>2015-11-14 00:41:19 - Closed</td>
-            </tr>
+            <!--<tr>-->
+                <!--<th>Date</th>-->
+                <!--<td>2015-11-14 00:41:19 - Closed</td>-->
+            <!--</tr>-->
             <tr>
                 <th>Game</th>
                 <td>League of Legends</td>
             </tr>
-            <tr>
-                <th>Tournament</th>
-                <td>
-                    Test Tourny
-                </td>
-            </tr>
-            <tr>
-                <th>1</th>
-                <td></td>
-            </tr>
+            <!--<tr>-->
+                <!--<th>Tournament</th>-->
+                <!--<td>-->
+                    <!--Test Tourny-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>1</th>-->
+                <!--<td></td>-->
+            <!--</tr>-->
 
             </tbody>
         </table>
@@ -58,6 +67,7 @@
 
     </div>
 
-    <div class="comments-login-info well">To write a comment, <a href="http://dev.nexientchampionshipseries.com/auth/login">login</a> or <a href="http://dev.nexientchampionshipseries.com/auth/registration/create">register</a>.</div>
+    <!--<div class="comments-login-info well">To write a comment, <a href="http://dev.nexientchampionshipseries.com/auth/login">login</a> or <a href="http://dev.nexientchampionshipseries.com/auth/registration/create">register</a>.</div>-->
+    <div class="comments-login-info well">Comments are currently disabled.</div>
 
 </section>

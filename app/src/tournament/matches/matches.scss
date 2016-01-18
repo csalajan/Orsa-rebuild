@@ -7,6 +7,18 @@
   max-width: 120px;
   max-height: 120px;
 }
+
+.page-matches .overview .result {
+  font-size: 1.2em;
+}
+
+.page-matches .overview .result .victory {
+  color: #00ff4e;
+}
+
+.page-matches .overview .result .defeat {
+  color: #ff4000;
+}
 .page-matches .overview .mid {
   padding-top: 40px;
   font-size: 30px;
@@ -56,6 +68,15 @@
   font-weight: bold;
 
 }
+
+.widget-matches-latest li a .winner {
+  color: #00ff4e;
+}
+
+.widget-matches-latest li a .loser {
+  color: #ff4000;
+}
+
 .widget-matches-latest li img {
   margin-right: 10px;
   vertical-align: -9px;

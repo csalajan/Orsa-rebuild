@@ -3,8 +3,9 @@
     <ul class="list-unstyled">
         <li ng-repeat="match in matches">
             <a href="/match/{{match.id}}">
-                <span class="blue-team">{{match.blueTeam.name}}</span>
-                <span class="red-team">vs {{match.redTeam.name}}</span>
+                <span class="blue-team">{{match.opponents[0].participant.name}}</span>
+                <span> vs </span>
+                <span class="red-team">{{match.opponents[1].participant.name}}</span>
                 <div>
                     <small class="tournament">Test Tourny</small> -
                     <small class="date">2015-11-14</small>

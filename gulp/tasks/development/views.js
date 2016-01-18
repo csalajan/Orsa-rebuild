@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var config = require('../../config');
+var watch = require('gulp-watch');
 
 gulp.task('index', function() {
     return gulp.src([config.development.index, config.development.htaccess])
@@ -10,4 +11,8 @@ gulp.task('views', ['index'], function() {
 
     return gulp.src(config.views.files)
         .pipe(gulp.dest(config.views.destination));
+});
+
+gulp.task('views:watch', function() {
+    gulp.watch(config.views.files, ['views']);
 });
