@@ -196,6 +196,13 @@ var Toornament = {
 
     this.makeRequest(url, cb);
   },
+  getBrackets: function(cb) {
+    var url = this.generateUrl({
+      path: '/tournaments/' + this.tournamentId + '/stages/2/view'
+    });
+
+    this.makeRequest(url, cb);
+  },
   updateMatch: function (matchId, data, cb) {
     var url = this.generateUrl({
       path: '/tournaments/' + this.tournamentId + '/matches/' + matchId + '/result'
