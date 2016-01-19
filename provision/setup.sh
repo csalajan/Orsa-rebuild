@@ -6,11 +6,10 @@ DBNAME=ncs
 DBUSER=ncsuser
 DBPASSWD=test123
 
-apt-get update
-apt-get install -y python-software-properties python g++ make
-add-apt-repository -y ppa:chris-lea/node.js
-apt-get update
-apt-get install -y nodejs
+sudo apt-get update
+sudo apt-get install -y curl
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 
 # nginx
@@ -37,4 +36,5 @@ echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASSWD'"
 
+sudo npm install -g sails
 sudo npm install -g nodemon

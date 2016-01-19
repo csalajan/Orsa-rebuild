@@ -3,7 +3,7 @@ var config = require('../../config').api;
 var watch = require('gulp-watch');
 
 gulp.task('api', function() {
-    return gulp.src(config.files, {base: './'})
+    return gulp.src(config.files)
         .pipe(gulp.dest(config.destination));
 });
 

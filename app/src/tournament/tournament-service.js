@@ -1,7 +1,7 @@
 var TournamentService = function($rootScope, ApiFactory) {
     var matches = [];
 
-    ApiFactory.getData('/matches').then(function(data) {
+    ApiFactory.getData('/tournament/matches').then(function(data) {
         matches = data;
         $rootScope.$broadcast('matches-updated');
     });
@@ -24,7 +24,7 @@ var TournamentService = function($rootScope, ApiFactory) {
     };
 
     this.getGroupStage = function() {
-        return ApiFactory.getData('/groups');
+        return ApiFactory.getData('/tournament/groups');
     };
 };
 

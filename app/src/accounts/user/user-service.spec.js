@@ -15,8 +15,8 @@ describe('User Service', function() {
         beforeEach(function() {
             var deferred = $q.defer();
             deferred.resolve({status: 200, data: {}});
-            $http.when('POST', '/user/login').respond(deferred.promise);
-            $http.when('POST', '/user/register').respond(deferred.promise);
+            $http.when('POST', '/api/user/login').respond(deferred.promise);
+            $http.when('POST', '/api/user/register').respond(deferred.promise);
         });
 
         it('Login', function() {

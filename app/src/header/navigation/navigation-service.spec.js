@@ -7,6 +7,10 @@ describe('Navigation Service', function() {
         {
             name: 'home',
             url: '/'
+        },
+        {
+            name: 'groups',
+            url: '/groups'
         }
     ];
 
