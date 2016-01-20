@@ -2,7 +2,8 @@ var PasswordVerifyDirective = function(common) {
     return {
         templateUrl: common.VIEW_PATH + "/forms/password-verify.html",
         scope: {
-            passwordVal: "="
+            passwordVal: "=",
+            model: "="
         },
         require: ['^form', 'ngModel'],
         link: function(scope, element, attrs, ctrls) {

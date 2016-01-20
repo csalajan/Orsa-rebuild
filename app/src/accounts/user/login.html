@@ -1,4 +1,4 @@
-<div ng-show="enabled" ng-if="!user.loggedIn" class="widget widget-auth-login">
+<div ng-if="!user" class="widget widget-auth-login">
     <span class="btn btn-default dropdown-toggle" ng-click="toggleLogin()">Login</span>
     <ul class="dropdown-menu login-widget">
         <form ng-submit="login(loginUser)">
@@ -29,4 +29,18 @@
         </form>
     </ul>
     <a class="btn btn-default" ng-href="/register">Register</a>
+</div>
+
+<div ng-if="user" class="widget widget-auth-logged-in">
+        <ul class="list-inline">
+            <li><a href="http://www.nexientchampionshipseries.com/users/2/thef" class="btn btn-default">Profile</a></li>
+            <li><a href="http://www.nexientchampionshipseries.com/users/2/edit" class="btn btn-default">Edit Profile</a></li>
+            <li>
+                <a href="http://www.nexientchampionshipseries.com/messages/inbox" class="btn btn-default">Message</a>
+            </li>
+            <li><a href="http://www.nexientchampionshipseries.com/friends/2" class="btn btn-default">Friends</a></li>
+            <!--<li><a href="http://www.nexientchampionshipseries.com/admin" class="btn btn-default">Admin-Backend</a></li>-->
+            <li><a href="http://www.nexientchampionshipseries.com/auth/logout" class="btn btn-default">Logout</a></li>
+        </ul>
+    </div>
 </div>

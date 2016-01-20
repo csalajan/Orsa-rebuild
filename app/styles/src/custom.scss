@@ -1,0 +1,27 @@
+$primaryColor: #00afff;
+$secondaryColor: #090a0c;
+$secondaryColor-light: lighten(desaturate(adjust-hue($secondaryColor, 0.0000), 6.1776), 3.1373);
+$secondaryColor-lighter: lighten(desaturate(adjust-hue($secondaryColor, -14.2857), 4.4266), 9.8039);
+
+/*
+ * Mainlayout
+ */
+body {
+  background-color: $secondaryColor;
+  font-family: 'Titillium Web';
+  color: white;
+}
+.widget-auth-logged-in a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #373e43;
+  color: #4e585f;
+}
+
+.divider {
+  height: 4px;
+  margin-bottom: 20px;
+  background-color: $primaryColor;
+}
+
+

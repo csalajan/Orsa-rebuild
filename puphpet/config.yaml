@@ -4,8 +4,8 @@ vagrantfile:
         box: puphpet/ubuntu1404-x64
         box_url: puphpet/ubuntu1404-x64
         hostname: dev.local.com
-        memory: '1024'
-        cpus: '1'
+        memory: '2048'
+        cpus: '2'
         chosen_provider: virtualbox
         box_version: ''
         network:
@@ -283,7 +283,7 @@ nodejs:
         version: '4'
     npm_packages:
         - sails
-        - nodemon
+        - forever
 hhvm:
     install: '0'
     nightly: 0

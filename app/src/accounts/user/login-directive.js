@@ -1,11 +1,11 @@
 var UserLogin = function(common, UserService) {
     return {
         templateUrl: common.VIEW_PATH + '/accounts/user/login.html',
-        scope: {
-          user: '=user'
-        },
         link: function(scope) {
             scope.loginUser = {};
+
+            scope.user = UserService.getUser();
+
             scope.toggleLogin = function() {
                 var dropdown = document.getElementsByClassName('dropdown-menu')[0];
                 if (dropdown.style.display === 'block') {
@@ -16,14 +16,14 @@ var UserLogin = function(common, UserService) {
             };
 
             scope.login = function(loginUser) {
-                console.log(loginUser);
-                UserService.login("test", "test");
+                UserService.login(loginUser);
                 scope.toggleLogin();
             };
 
-            var handleLogin = function(response) {
-
-            };
+            scope.$on('user-login', function() {
+                console.log('User logged In');
+                scope.user = UserService.getUser();
+            });
         }
     };
 };

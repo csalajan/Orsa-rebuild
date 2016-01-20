@@ -29,11 +29,11 @@ module.exports = {
     styles: {
         destination: development + '/css',
         files: [
-            'styles/src/*.scss',
+            'app/styles/src/*.scss',
             'app/src/**/*.scss'
         ],
         dependencies: [
-            'styles/dependencies/font-awesome.min.css'
+            'app/styles/dependencies/font-awesome.min.css'
         ]
     },
     scripts: {
@@ -55,7 +55,7 @@ module.exports = {
     fonts: {
         destination: development + '/fonts',
         files: [
-            'styles/fonts/*'
+            'app/styles/fonts/*'
         ]
     },
     views: {
