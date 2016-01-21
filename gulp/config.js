@@ -19,7 +19,7 @@ module.exports = {
     api: {
         files: [
             'webapp/**/*',
-            '!webapp/node_modules/*'
+            '!webapp/node_modules/**/*'
         ],
         destination: build + '/webapp'
     },

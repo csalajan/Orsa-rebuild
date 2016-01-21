@@ -1,4 +1,4 @@
-var UserLogin = function(common, UserService) {
+var UserLogin = function(common, UserService, $location) {
     return {
         templateUrl: common.VIEW_PATH + '/accounts/user/login.html',
         link: function(scope) {
@@ -28,4 +28,4 @@ var UserLogin = function(common, UserService) {
     };
 };
 
-angular.module('ncs').directive('userLogin', ['COMMON', 'UserService', UserLogin]);
+angular.module('ncs').directive('userLogin', ['COMMON', 'UserService', '$location', UserLogin]);

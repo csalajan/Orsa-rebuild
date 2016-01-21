@@ -1,0 +1,137 @@
+<section class="page page-users page-users-show">
+    <h1 class="page-title">{{user.username}}</h1>
+
+    <div class="profile-basics row">
+        <div class="col-md-8">
+            <table class="table horizontal">
+                <tbody>
+                <tr>
+                    <th class="title">Name</th>
+                    <td>
+                        <img src="http://www.nexientchampionshipseries.com/uploads/countries/us.png" alt="USA">
+                        {{user.name}}
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title">Gender:</th>
+                    <td>
+                        <span ng-switch="user.gender">
+                            <span ng-switch-when="Male"><i class="fa fa-mars"></i> Male</span>
+                            <span ng-switch-when="Female"><i class="fa fa-venus"></i> Female</span>
+                        </span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title">Birthdate:</th>
+                    <td>{{user.birthdate}}</td>
+                </tr>
+                <tr>
+                    <th class="title">Occupation:</th>
+                    <td>{{user.occupation}}</td>
+                </tr>
+                <tr>
+                    <th class="title">Website:</th>
+                    <td>{{user.website}}</td>
+                </tr>
+                <tr>
+                    <th class="title">About:</th>
+                    <td>{{user.about}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="details col-md-4">
+            <img src="http://www.nexientchampionshipseries.com/theme/user.png" alt="Thef">
+
+            <div class="actions">
+                <a class="btn btn-default" href="http://www.nexientchampionshipseries.com/messages/create/Thef" title="Send message" disabled="disabled"><i class="fa fa-envelope"></i></a>
+                <a class="btn btn-default" href="http://www.nexientchampionshipseries.com/friends/add/2" title="Add as friend" disabled="disabled"><i class="fa fa-user-plus"></i></a>
+                <a class="btn btn-default" href="http://www.nexientchampionshipseries.com/forums/posts/user/2/thef" title="Show Latest Forums Posts" disabled="disabled"><i class="fa fa-comment"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="profile-socials">
+                <table class="table horizontal">
+                    <tbody>
+                    <tr>
+                        <th class="title">Summoner Name</th>
+                        <td>
+                            {{user.summoner}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">Facebook:</th>
+                        <td>
+                            <a href="http://www.facebook.com/" target="_blank">{{user.facebook}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">Twitter:</th>
+                        <td>
+                            <a href="http://www.twitter.com/" target="_blank">{{user.twitter}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">Skype:</th>
+                        <td><a href="skype:35?" target="_blank">{{user.skype}}</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <div class="col-md-6">
+            <div class="profile-pc">
+                <table class="table horizontal">
+                    <tbody>
+                    <tr>
+                        <th class="title">CPU:</th>
+                        <td>{{user.cpu}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Graphics:</th>
+                        <td>{{user.graphics}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">RAM:</th>
+                        <td>{{user.ram}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Motherboard:</th>
+                        <td>{{user.motherboard}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Drives:</th>
+                        <td>{{user.drives}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Display:</th>
+                        <td>{{user.display}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Mouse:</th>
+                        <td>{{user.mouse}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Keyboard:</th>
+                        <td>{{user.keyboard}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Headset:</th>
+                        <td>{{user.headset}}</td>
+                    </tr>
+                    <tr>
+                        <th class="title">Mousepad:</th>
+                        <td>{{user.mousepad}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

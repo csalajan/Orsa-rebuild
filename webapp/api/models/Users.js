@@ -26,6 +26,63 @@ module.exports = {
       type: 'string',
       unique: true
     },
+    name: {
+      type: 'string'
+    },
+    gender: {
+      type: 'string'
+    },
+    birthdate: {
+      type:  'datetime'
+    },
+    occupation: {
+      type: 'string'
+    },
+    website: {
+      type: 'string'
+    },
+    about: {
+      type: 'text'
+    },
+    facebook: {
+      type: 'string'
+    },
+    twitter: {
+      type: 'string'
+    },
+    skype: {
+      type: 'string'
+    },
+    cpu: {
+      type: 'string'
+    },
+    graphics: {
+      type: 'string'
+    },
+    ram: {
+      type: 'string'
+    },
+    motherboard: {
+      type: 'string'
+    },
+    drives: {
+      type: 'string'
+    },
+    display: {
+      type: 'string'
+    },
+    mouse: {
+      type: 'string'
+    },
+    keyboard: {
+      type: 'string'
+    },
+    headset: {
+      type: 'string'
+    },
+    mousepad: {
+      type: 'string'
+    },
 
     encryptedPassword: {
       type: 'string'

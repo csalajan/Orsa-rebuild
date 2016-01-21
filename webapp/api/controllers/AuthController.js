@@ -49,6 +49,19 @@ module.exports = {
           }
         });
       })
+    },
+    verify: function(req, res) {
+      var token = req.param('token');
+
+      jwToken.verify(token, function(err, data) {
+        if (err) return res.json(401, {err: 'Invalid Token!'});
+        Users.findOne({id: data.id}).exec(function(err, user) {
+          if (err) return res.json(404, {err: 'User Not Found'});
+          res.json({
+            user: user
+          });
+        });
+      });
     }
 };
 

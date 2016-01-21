@@ -1,4 +1,4 @@
-var UserService = function(ApiFactory, $window, $rootScope) {
+var UserService = function(ApiFactory, $window, $rootScope, $location) {
     var USER;
 
     this.getUser = function() {
@@ -15,15 +15,31 @@ var UserService = function(ApiFactory, $window, $rootScope) {
             });
     };
 
+    this.logout = function() {
+        $rootScope.$broadcast('user-logout');
+    };
+
     this.register = function(user) {
-        ApiFactory.postData('/auth/register', user)
+        return ApiFactory.postData('/auth/register', user)
             .then(function(response) {
                 USER = response.user;
                 $window.sessionStorage.token = response.token;
 
                 $rootScope.$broadcast('user-login');
+                $location.path('/profile');
+            });
+    };
+
+    this.verifyUser = function(token) {
+        ApiFactory.postData('/auth/verify', {token: token})
+            .then(function(response) {
+               if (response.user) {
+                   USER = response.user;
+
+                   $rootScope.$broadcast('user-login');
+               }
             });
     };
 };
 
-angular.module('ncs').service('UserService', ['ApiFactory', '$window', '$rootScope', UserService]);
+angular.module('ncs').service('UserService', ['ApiFactory', '$window', '$rootScope', '$location', UserService]);
