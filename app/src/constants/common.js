@@ -1,5 +1,5 @@
 var common = {
-    "APP_NAME": "Nexient Championship Series",
+    "APP_NAME": "ALT League",
     "VIEW_PATH": "src/app"
 };
 

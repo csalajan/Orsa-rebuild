@@ -5,7 +5,7 @@ vagrantfile:
         box_url: puphpet/ubuntu1404-x64
         hostname: dev.local.com
         memory: '2048'
-        cpus: '2'
+        cpus: '1'
         chosen_provider: virtualbox
         box_version: ''
         network:

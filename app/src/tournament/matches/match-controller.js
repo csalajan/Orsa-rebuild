@@ -5,6 +5,12 @@ var MatchController = function($scope, $routeParams, TournamentService) {
         3: 'Defeat'
     };
 
+    $scope.matchFormats = {
+        "bo5": "Best of 5",
+        "bo3": "Best of 3",
+        "one": "Best of 1"
+    };
+
     $scope.match = TournamentService.getMatchDetails($routeParams.id);
 };
 

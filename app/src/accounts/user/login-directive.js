@@ -1,6 +1,6 @@
 var UserLogin = function(common, UserService, $location) {
     return {
-        templateUrl: common.VIEW_PATH + '/accounts/user/login.html',
+        templateUrl: common.VIEW_PATH + '/accounts/user/login-directive.html',
         link: function(scope) {
             scope.loginUser = {};
 
@@ -20,8 +20,15 @@ var UserLogin = function(common, UserService, $location) {
                 scope.toggleLogin();
             };
 
+            scope.logout = function() {
+                UserService.logout();
+            };
+
             scope.$on('user-login', function() {
-                console.log('User logged In');
+                scope.user = UserService.getUser();
+            });
+
+            scope.$on('user-logout', function() {
                 scope.user = UserService.getUser();
             });
         }

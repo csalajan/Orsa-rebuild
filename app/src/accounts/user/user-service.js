@@ -16,6 +16,8 @@ var UserService = function(ApiFactory, $window, $rootScope, $location) {
     };
 
     this.logout = function() {
+        USER = null;
+        $window.sessionStorage.token = null;
         $rootScope.$broadcast('user-logout');
     };
 

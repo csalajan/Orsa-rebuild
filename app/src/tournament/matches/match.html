@@ -15,7 +15,7 @@
 
         </div>
         <div class="mid">
-            <span class="blue-draw"><span class="draw">00</span>:<span class="draw">00</span></span>
+            <span class="blue-draw"><span class="draw">{{match.opponents[0].score}}</span>:<span class="draw">{{match.opponents[1].score}}</span></span>
         </div>
         <div class="red">
             <img src="http://dev.nexientchampionshipseries.com/theme/no_opponent.jpg" alt="Test 2">
@@ -39,6 +39,10 @@
                 <th>Game</th>
                 <td>League of Legends</td>
             </tr>
+            <tr>
+                <th>Format</th>
+                <td>{{matchFormats[match.match_format]}}</td>
+            </tr>
             <!--<tr>-->
                 <!--<th>Tournament</th>-->
                 <!--<td>-->
@@ -56,8 +60,9 @@
 
     <div class="scores clearfix">
         <div class="item">
-            <img src="http://dev.nexientchampionshipseries.com/uploads/maps/14_image.jpg" alt="Summoner's Rift">
             <span>Summoner's Rift: :</span>
+            <img src="http://dev.nexientchampionshipseries.com/uploads/maps/14_image.jpg" alt="Summoner's Rift">
+
         </div>
     </div>
 
