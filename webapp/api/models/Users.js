@@ -22,6 +22,10 @@ module.exports = {
       required: 'true',
       unique: true
     },
+    isAdmin: {
+      type: 'integer',
+      defaultsTo: 0
+    },
     summoner: {
       type: 'string',
       unique: true
