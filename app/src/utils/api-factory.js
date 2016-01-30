@@ -8,19 +8,6 @@ var ApiFactory = function($http, $q) {
     var AuthToken = "";
 
     return {
-        /**
-         * Sets the authorization token.
-         *
-         * ### Examples:
-         *
-         *     ApiFactory.setToken('123')
-         *
-         * @param {String} string value of token
-         * @api public
-         */
-        setToken: function (token) {
-            AuthToken = token;
-        },
 
         /**
          * Sends a GET request to the back end
@@ -45,6 +32,18 @@ var ApiFactory = function($http, $q) {
 
             return defered.promise;
         },
+        /**
+         * Sends a POST request to the back end
+         *
+         * ### Examples:
+         *
+         *     ApiFactory.getData('/users', {username: 'test')
+         *
+         * @param {String} url to back end
+         * @param {object} data to post
+         * @returns {Object} Promise object for response
+         * @api public
+         */
         postData: function (api, data) {
             var defered = $q.defer();
             $http.post(url + api, data)

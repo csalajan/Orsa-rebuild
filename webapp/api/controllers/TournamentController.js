@@ -5,6 +5,13 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 module.exports = {
+  index: function(req, res) {
+    Tournament.findAll(function(err, data) {
+      if (!err) {
+        res.json(data);
+      }
+    });
+  },
   matches: function(req, res) {
     Toornament.getMatches(function(err, data) {
       if (!err) {

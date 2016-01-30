@@ -25,6 +25,15 @@
 
 
 
+<!-- Start app\src\articles\news-service.js -->
+
+## NewsService()
+
+<!-- End app\src\articles\news-service.js -->
+
+
+
+
 <!-- Start app\src\config\routes.js -->
 
 <!-- End app\src\config\routes.js -->
@@ -93,20 +102,20 @@
 
 
 
-<!-- Start app\src\home\home-controller.js -->
-
-## HomeController()
-
-<!-- End app\src\home\home-controller.js -->
-
-
-
-
 <!-- Start app\src\header\header-directive.js -->
 
 ## HeaderDirective()
 
 <!-- End app\src\header\header-directive.js -->
+
+
+
+
+<!-- Start app\src\home\home-controller.js -->
+
+## HomeController()
+
+<!-- End app\src\home\home-controller.js -->
 
 
 
@@ -133,6 +142,20 @@
 
 ## TournamentService()
 
+Service for handling all tournament information.
+
+## getLatestMatches()
+
+Returns latest completed matches
+
+### Examples:
+
+    TournamentService.getLatestMatches()
+
+### Return:
+
+* **Object** list of latest matches
+
 <!-- End app\src\tournament\tournament-service.js -->
 
 
@@ -143,18 +166,6 @@
 ## ApiFactory()
 
 Factory for sending requests to the back end
-
-## setToken(string)
-
-Sets the authorization token.
-
-### Examples:
-
-    ApiFactory.setToken('123')
-
-### Params:
-
-* **String** *string* value of token
 
 ## getData(url)
 
@@ -167,6 +178,23 @@ Sends a GET request to the back end
 ### Params:
 
 * **String** *url* to back end
+
+### Return:
+
+* **Object** Promise object for response
+
+## postData(url, data)
+
+Sends a POST request to the back end
+
+### Examples:
+
+    ApiFactory.getData('/users', {username: 'test')
+
+### Params:
+
+* **String** *url* to back end
+* **object** *data* to post
 
 ### Return:
 
@@ -204,11 +232,47 @@ Sends a GET request to the back end
 
 
 
+<!-- Start app\src\accounts\friends\friends-controller.js -->
+
+## FriendsController()
+
+<!-- End app\src\accounts\friends\friends-controller.js -->
+
+
+
+
+<!-- Start app\src\accounts\messages\messages-controller.js -->
+
+## MessagesController()
+
+<!-- End app\src\accounts\messages\messages-controller.js -->
+
+
+
+
+<!-- Start app\src\accounts\profile\profile-controller.js -->
+
+## ProfileController()
+
+<!-- End app\src\accounts\profile\profile-controller.js -->
+
+
+
+
 <!-- Start app\src\accounts\registration\registration-controller.js -->
 
 ## RegistrationController()
 
 <!-- End app\src\accounts\registration\registration-controller.js -->
+
+
+
+
+<!-- Start app\src\accounts\teams\teams-controller.js -->
+
+## TeamsController()
+
+<!-- End app\src\accounts\teams\teams-controller.js -->
 
 
 
@@ -245,6 +309,15 @@ Sends a GET request to the back end
 ## NavigationService()
 
 <!-- End app\src\header\navigation\navigation-service.js -->
+
+
+
+
+<!-- Start app\src\tournament\groups\groups-controller.js -->
+
+## GroupsController()
+
+<!-- End app\src\tournament\groups\groups-controller.js -->
 
 
 

@@ -1,3 +1,8 @@
+/**
+ * Service for handling all tournament information.
+ *
+ */
+
 var TournamentService = function($rootScope, ApiFactory) {
     var matches = [];
 
@@ -7,6 +12,16 @@ var TournamentService = function($rootScope, ApiFactory) {
     });
 
 
+    /**
+     * Returns latest completed matches
+     *
+     * ### Examples:
+     *
+     *     TournamentService.getLatestMatches()
+     *
+     * @returns {Object} list of latest matches
+     * @api public
+     */
     this.getLatestMatches = function() {
         return matches.filter(function(match) {
             return match.status === 'completed' && match.opponents[0].participant && match.opponents[1].participant;
