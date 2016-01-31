@@ -4,6 +4,10 @@
 
 ### Dependencies
 
+#### Global Dependencies
+Virtual Box
+Vagrant
+
 #### Global NPM Packages
 node-gyp
 karma
@@ -11,6 +15,13 @@ phantomjs
 
 #### Project Dependencies
 run `npm install`
+
+#### Dev Environment
+Install Virtual Box
+Install Vagrant
+
+Navigate to directory.
+`vagrant up`
 
 ## Gulp Tasks
 
@@ -23,9 +34,3 @@ run `npm install`
 `gulp test`
 
 Runs all karma tests
-
-### Deploy
-`gulp deploy`
-
-- Runs `build` tasks
-- deploys to dev server

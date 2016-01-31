@@ -43,6 +43,7 @@
     "require-dir": "^0.3.0",
     "rsync": "^0.4.0",
     "run-sequence": "^1.1.5",
+    "sails-hook-fixtures": "^0.11.7",
     "webpack": "^1.12.6"
   }
 }

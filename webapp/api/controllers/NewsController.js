@@ -9,13 +9,7 @@ module.exports = {
 	index: function(req, res) {
     Article.find({sort: 'id DESC', limit: 10}).exec(function(err, data) {
       if (!err) {
-        res.json([
-          {
-            id: 1,
-            title: 'test',
-            article: 'test'
-          }
-        ]);
+        res.json(data);
       } else {
         res.json(err);
       }
