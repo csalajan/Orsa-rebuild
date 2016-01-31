@@ -5,22 +5,24 @@
 ### Dependencies
 
 #### Global Dependencies
-Virtual Box
-Vagrant
+- Virtual Box
+- Vagrant
 
 #### Global NPM Packages
-node-gyp
-karma
-phantomjs
+- node-gyp
+- karma
+- phantomjs
+- gulp
 
 #### Project Dependencies
 run `npm install`
 
 #### Dev Environment
-Install Virtual Box
-Install Vagrant
+- Install Virtual Box
+- Install Vagrant
 
 Navigate to directory.
+
 `vagrant up`
 
 ## Gulp Tasks
