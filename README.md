@@ -16,14 +16,21 @@
 
 `npm install -g node-gyp karma phantomjs gulp`
 
-#### Project Dependencies
-run `npm install`
-
 #### Dev Environment
 - Install Virtual Box
 - Install Vagrant
 
 Navigate to directory.
+
+Install Dependencies
+
+`npm install`
+
+Build Project
+
+`gulp build`
+
+Launch VM
 
 `vagrant up`
 
