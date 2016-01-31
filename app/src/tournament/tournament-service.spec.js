@@ -78,4 +78,16 @@ describe('Tournament Service', function() {
             $http.flush();
         });
     });
+
+    describe('Group Stages', function() {
+        it('returns group data', function(done) {
+            $http.expectGET('/api/tournament/groups').respond({});
+            var data = tournamentService.getGroupStage().then(function(response) {
+                expect(response).toEqual({});
+                done();
+            });
+
+            $http.flush();
+        });
+    });
 });

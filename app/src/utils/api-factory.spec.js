@@ -17,20 +17,44 @@ describe('Api Factory', function() {
 
     }));
 
-
-    it('Sends a POST request', function(done) {
-        ApiFactory.postData('/test', {}).then(function(response) {
-            expect(response).toEqual({status: 200, data: []});
-            done();
+    describe('POST', function() {
+        it('Sends a POST request', function(done) {
+            ApiFactory.postData('/test', {}).then(function(response) {
+                expect(response).toEqual({status: 200, data: []});
+                done();
+            });
+            $http.flush();
         });
-        $http.flush();
+
+        it('Fails POST Request', function(done) {
+            $http.expectPOST('/api/test/fail').respond(500, {});
+            ApiFactory.postData('/test/fail', {}).then(function(response) {
+
+                done();
+            }, function(response) {
+                done();
+            });
+            $http.flush();
+        });
     });
-
-    it('Sends a GET request', function(done) {
-        ApiFactory.getData('/test', {}).then(function(response) {
-            expect(response).toEqual({status: 200, data: []});
-            done();
+    describe('GET', function() {
+        it('Sends a GET request', function(done) {
+            ApiFactory.getData('/test', {}).then(function(response) {
+                expect(response).toEqual({status: 200, data: []});
+                done();
+            });
+            $http.flush();
         });
-        $http.flush();
+
+        it('Fails GET Request', function(done) {
+            $http.expectGET('/api/test/fail').respond(500, {});
+            ApiFactory.getData('/test/fail', {}).then(function(response) {
+
+                done();
+            }, function(response) {
+                done();
+            });
+            $http.flush();
+        });
     });
 });

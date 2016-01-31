@@ -22,7 +22,8 @@ module.exports = function(config) {
         'node_modules/angular-mocks/angular-mocks.js',
         'app/src/app.js',
         'app/src/constants/common.js',
-        'app/src/**/*.spec.js'
+        'app/src/**/*.spec.js',
+        'app/src/**/*.html'
     ],
 
 
@@ -35,7 +36,8 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       //'**/app/src/**/!(*spec).js': ['coverage'],
-      '**/app/src/**/*.js': ['webpack']
+      '**/app/src/**/*.js': ['webpack'],
+      '**/app/src/**/*.html': ['ng-html2js']
     },
 
 

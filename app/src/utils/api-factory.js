@@ -50,8 +50,8 @@ var ApiFactory = function($http, $q) {
                 .success(function(response) {
                     defered.resolve(response);
                 })
-                .error(function() {
-                    defered.reject();
+                .error(function(response) {
+                    defered.reject(response);
                 });
 
             return defered.promise;

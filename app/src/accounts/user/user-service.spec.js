@@ -50,10 +50,11 @@ describe('User Service', function() {
 
     describe('Verification', function() {
         beforeEach(function() {
-            $http.expectPOST('/api/auth/verify', {token: 'token'}).respond(200, {user: user});
+
         });
 
-        it('Verify User', function(done) {
+        it('Verified User', function(done) {
+            $http.expectPOST('/api/auth/verify', {token: 'token'}).respond(200, {user: user});
             userService.verifyUser('token');
 
             $rootScope.$on('user-login', function() {
@@ -62,7 +63,23 @@ describe('User Service', function() {
             });
 
             $http.flush();
-        })
+        });
+
+        it('Unverified User', function() {
+            $http.expectPOST('/api/auth/verify', {token: 'token'}).respond(200, {});
+            userService.verifyUser('token');
+
+            $http.flush();
+        });
+    });
+
+    describe('Logout', function() {
+
+        it('Logs the user out', function() {
+            userService.logout();
+
+            expect(userService.getUser()).toBe(null);
+        });
     });
 
 });
