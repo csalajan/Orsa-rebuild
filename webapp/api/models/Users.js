@@ -87,6 +87,9 @@ module.exports = {
     mousepad: {
       type: 'string'
     },
+    matches: {
+      model: 'Match'
+    },
 
     encryptedPassword: {
       type: 'string'

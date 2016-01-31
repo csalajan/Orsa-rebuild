@@ -11,6 +11,13 @@ var TournamentService = function($rootScope, ApiFactory) {
         $rootScope.$broadcast('matches-updated');
     });
 
+    this.getActiveTournaments = function() {
+        return ApiFactory.getData('/tournament');
+    };
+
+    this.getTournamentInfo = function(id) {
+        return ApiFactory.getData('/tournament/'+id);
+    };
 
     /**
      * Returns latest completed matches

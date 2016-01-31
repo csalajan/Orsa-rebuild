@@ -6,6 +6,10 @@ var nav = [
         url: '/'
     },
     {
+        name: 'tournaments',
+        url: '/tournaments'
+    },
+    {
         name: 'groups',
         url: '/groups'
     }

@@ -1,0 +1,10 @@
+<section class="page page-tournament">
+    <h1 class="page-title">{{tournament.name}}</h1>
+    <p>{{tournament.description}}</p>
+
+    <h2>Rules</h2>
+    <p>{{tournament.rules}}</p>
+
+    <h2>Prizes</h2>
+    <p ng-bind-html="tournament.prizes | rawHtml"></p>
+</section>

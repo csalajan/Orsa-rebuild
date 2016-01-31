@@ -90,4 +90,28 @@ describe('Tournament Service', function() {
             $http.flush();
         });
     });
+
+    describe('Tournaments', function() {
+        it('returns list of tournaments', function(done) {
+            $http.expectGET('/api/tournament').respond({});
+
+            tournamentService.getActiveTournaments().then(function(response) {
+                expect(response).toEqual({});
+                done();
+            });
+
+            $http.flush();
+        });
+
+        it('returns a single tournament', function(done) {
+            $http.expectGET('/api/tournament/1').respond({});
+
+            tournamentService.getTournamentInfo(1).then(function(response) {
+                expect(response).toEqual({});
+                done();
+            });
+
+            $http.flush();
+        });
+    })
 });

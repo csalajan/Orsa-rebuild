@@ -6,7 +6,16 @@
  */
 module.exports = {
   index: function(req, res) {
-    Tournament.findAll(function(err, data) {
+    Tournament.find().where({
+      or: [
+        {
+          status: 'active'
+        },
+        {
+          status: 'registration'
+        }
+      ]
+    }).exec(function(err, data) {
       if (!err) {
         res.json(data);
       }

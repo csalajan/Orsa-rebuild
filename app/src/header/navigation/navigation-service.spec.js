@@ -9,6 +9,10 @@ describe('Navigation Service', function() {
             url: '/'
         },
         {
+            name: 'tournaments',
+            url: '/tournaments'
+        },
+        {
             name: 'groups',
             url: '/groups'
         }

@@ -15,6 +15,9 @@ module.exports = {
       article: {
         type: 'text',
         required: true
+      },
+      author: {
+        model: 'Users'
       }
   }
 };

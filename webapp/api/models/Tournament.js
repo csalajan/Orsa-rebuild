@@ -19,6 +19,40 @@ module.exports = {
       type: 'string',
       enum: ['inactive', 'registration', 'active', 'completed'],
       defaultsTo: 'inactive'
+    },
+    dateStart: {
+      type: 'date'
+    },
+    size: {
+      type: 'integer'
+    },
+    participantType: {
+      type: 'string',
+      enum: ['team', 'single']
+    },
+    description: {
+      type: 'text'
+    },
+    rules: {
+      type: 'text'
+    },
+    prizes: {
+      type: 'text'
+    },
+    teamSizeMin: {
+      type: 'integer'
+    },
+    teamSizeMax: {
+      type: 'integer'
+    },
+    matchFormat: {
+      type: 'string',
+      enum: ['bo1', 'bo3', 'bo5', 'bo7']
+    },
+    matches: {
+      collection: 'Match',
+      via: 'tournament'
     }
+
   }
 };
