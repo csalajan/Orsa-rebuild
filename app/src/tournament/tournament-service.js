@@ -19,7 +19,7 @@ var TournamentService = function($rootScope, ApiFactory) {
      *
      *     TournamentService.getLatestMatches()
      *
-     * @returns {Object} list of latest matches
+     * @returns {Array} array of latest matches
      * @api public
      */
     this.getLatestMatches = function() {

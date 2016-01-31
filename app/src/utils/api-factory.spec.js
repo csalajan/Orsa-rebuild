@@ -12,21 +12,25 @@ describe('Api Factory', function() {
 
         $http = $httpBackend;
 
-        $http.when('POST', '/test').respond({status: 200, data: []});
-        $http.when('GET', '/test').respond({status: 200, data: []});
+        $http.when('POST', '/api/test').respond({status: 200, data: []});
+        $http.when('GET', '/api/test').respond({status: 200, data: []});
 
     }));
 
 
-    it('Sends a POST request', function() {
+    it('Sends a POST request', function(done) {
         ApiFactory.postData('/test', {}).then(function(response) {
             expect(response).toEqual({status: 200, data: []});
+            done();
         });
+        $http.flush();
     });
 
-    it('Sends a GET request', function() {
+    it('Sends a GET request', function(done) {
         ApiFactory.getData('/test', {}).then(function(response) {
             expect(response).toEqual({status: 200, data: []});
+            done();
         });
+        $http.flush();
     });
 });
