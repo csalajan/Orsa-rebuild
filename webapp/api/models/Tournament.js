@@ -23,6 +23,9 @@ module.exports = {
     dateStart: {
       type: 'date'
     },
+    registrationStart: {
+      type: 'date'
+    },
     size: {
       type: 'integer'
     },

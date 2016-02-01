@@ -47,6 +47,14 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
         .when('/tournament/:id/brackets', {
             templateUrl : COMMON.VIEW_PATH + '/tournament/brackets/bracket.html',
             controller: 'BracketController'
+        })
+        .when('/tournament/:id/rules', {
+            templateUrl : COMMON.VIEW_PATH + '/tournament/rules/rules.html',
+            controller: 'RulesController'
+        })
+        .when('/tournament/:id/prizes', {
+            templateUrl : COMMON.VIEW_PATH + '/tournament/prizes/prizes.html',
+            controller: 'PrizesController'
         });
 
     // use the HTML5 History API

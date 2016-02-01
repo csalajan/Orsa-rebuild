@@ -3,9 +3,36 @@
     <h1 class="page-title">{{tournament.name}}</h1>
     <p>{{tournament.description}}</p>
 
-    <h2>Rules</h2>
-    <p>{{tournament.rules}}</p>
+    <div class="profile-basics row">
+        <div class="col-md-8">
+            <table class="table horizontal">
+                <tbody>
+                <tr>
+                    <th class="title">Tournament Format</th>
+                    <td>{{matchFormat(tournament.matchFormat)}}</td>
+                </tr>
+                <tr>
+                    <th class="title">Registration Begins:</th>
+                    <td>{{tournament.registrationStart | date : 'MMM dd, yyyy'}}</td>
+                </tr>
+                <tr>
+                    <th class="title">Tournament Start:</th>
+                    <td>{{tournament.dateStart | date : 'MMM dd, yyyy'}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="details col-md-4">
+            <img src="http://www.nexientchampionshipseries.com/theme/user.png" alt="Thef">
 
-    <h2>Prizes</h2>
-    <p ng-bind-html="tournament.prizes | rawHtml"></p>
+            <div class="actions">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <button class="btn btn-success">Register Now</button>
+        </div>
+    </div>
 </section>
