@@ -11,10 +11,6 @@ describe('Navigation Service', function() {
         {
             name: 'tournaments',
             url: '/tournaments'
-        },
-        {
-            name: 'groups',
-            url: '/groups'
         }
     ];
 

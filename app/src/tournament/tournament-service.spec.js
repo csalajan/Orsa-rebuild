@@ -113,5 +113,5 @@ describe('Tournament Service', function() {
 
             $http.flush();
         });
-    })
+    });
 });

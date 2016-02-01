@@ -1,10 +1,11 @@
 <section class="page page-tournaments">
     <h1 class="page-title">Tournaments</h1>
 
-    <ul class="list-group">
-        <li class="list-group-item" ng-repeat="tournament in tournaments">
+    <ul class="list-unstyled">
+        <li ng-repeat="tournament in tournaments">
             <a href="/tournament/{{tournament.id}}">
-                {{tournament.name}}
+                <div>{{tournament.name}}</div>
+                <div>{{tournament.description}}</div>
             </a>
         </li>
     </ul>

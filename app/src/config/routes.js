@@ -12,10 +12,6 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
             templateUrl : COMMON.VIEW_PATH + '/tournament/matches/match.html',
             controller : 'MatchController'
         })
-        .when('/groups', {
-            templateUrl : COMMON.VIEW_PATH + '/tournament/groups/groups.html',
-            controller: 'GroupsController'
-        })
         .when('/profile', {
             templateUrl: COMMON.VIEW_PATH + '/accounts/profile/profile.html',
             controller: 'ProfileController'
@@ -39,6 +35,18 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
         .when('/tournament/:id', {
             templateUrl: COMMON.VIEW_PATH + '/tournament/tournament-page.html',
             controller: 'TournamentPageController'
+        })
+        .when('/tournament/:id/participants', {
+            templateUrl: COMMON.VIEW_PATH + '/tournament/participants/participants.html',
+            controller: 'ParticipantsController'
+        })
+        .when('/tournament/:id/groups', {
+            templateUrl : COMMON.VIEW_PATH + '/tournament/groups/groups.html',
+            controller: 'GroupsController'
+        })
+        .when('/tournament/:id/brackets', {
+            templateUrl : COMMON.VIEW_PATH + '/tournament/brackets/bracket.html',
+            controller: 'BracketController'
         });
 
     // use the HTML5 History API

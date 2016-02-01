@@ -1,4 +1,7 @@
 <section class="page page-groups">
+    <div tournament-navigation tournament="tournament"></div>
+    <h1 class="page-title">{{tournament.name}} - Groups</h1>
+
     <div class="group col-sm-5 col-sm-offset-1" ng-repeat="group in groups">
         <h3>{{group.name}}</h3>
         <ul class="list-group">

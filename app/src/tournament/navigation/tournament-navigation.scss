@@ -1,0 +1,48 @@
+.tournament-navigation {
+  background-color: $secondaryColor-lighter;
+  border-top: 1px solid #373e43;
+  border-bottom: 4px solid #171a1c;
+}
+.tournament-navigation ul {
+  margin: 10px 0px;
+}
+.tournament-navigation a {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.tournament-navigation li a:before {
+  content: ' ';
+  display: none;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0px;
+  height: 2px;
+  background-color: $primaryColor;
+}
+.tournament-navigation li a.active:before,
+.tournament-navigation li:hover a:before {
+  display: block;
+}
+.tournament-navigation li.icon {
+  margin-left: 20px;
+  color: #373e43;
+}
+.tournament-navigation .right {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+.tournament-navigation .right a {
+  color: #373e43;
+}
+.tournament-navigation .right a:hover {
+  transform: scale(1.5);
+  transition: all 0.08s linear;
+}

@@ -8,10 +8,6 @@ var NavigationService = function() {
             {
                 name: 'tournaments',
                 url: '/tournaments'
-            },
-            {
-                name: 'groups',
-                url: '/groups'
             }
         ];
     };

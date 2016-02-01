@@ -8,10 +8,6 @@ var nav = [
     {
         name: 'tournaments',
         url: '/tournaments'
-    },
-    {
-        name: 'groups',
-        url: '/groups'
     }
 ];
 
