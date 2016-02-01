@@ -37,7 +37,7 @@ module.exports = {
       type: 'string'
     },
     birthdate: {
-      type:  'datetime'
+      type:  'date'
     },
     occupation: {
       type: 'string'
