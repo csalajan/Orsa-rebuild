@@ -20,7 +20,17 @@ module.exports = {
   },
   update: function(req, res) {
 
+  },
+  team: function(req, res) {
+    Users.findOne(req.token.id).exec(function(err, user) {
+      if (!err) {
+        Team.findOne(user.team).populate('leader').populate('members').exec(function(error, team) {
+          if (!error) {
+            res.json(team);
+          }
+        });
+      }
+    });
   }
-
 };
 

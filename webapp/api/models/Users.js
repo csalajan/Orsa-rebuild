@@ -90,6 +90,9 @@ module.exports = {
     matches: {
       model: 'Match'
     },
+    team: {
+      model: 'Team'
+    },
 
     encryptedPassword: {
       type: 'string'

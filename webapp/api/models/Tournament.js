@@ -55,6 +55,25 @@ module.exports = {
     matches: {
       collection: 'Match',
       via: 'tournament'
+    },
+    participantsSolo: {
+      collection: 'Users',
+      via: 'id'
+    },
+    participantsTeams: {
+      collection: 'Team',
+      via: 'id'
+    },
+
+    addParticipant: function(participant) {
+      switch (this.participantType) {
+        case 'team':
+              this.participantsTeams.add(participant);
+              break;
+        case 'solo':
+              this.participantsSolo.add(participant);
+              break;
+      }
     }
 
   }

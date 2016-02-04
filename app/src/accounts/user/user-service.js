@@ -42,6 +42,14 @@ var UserService = function(ApiFactory, $window, $rootScope, $location) {
                }
             });
     };
+
+    this.getUserTeam = function() {
+        ApiFactory.getData('/users/team')
+            .then(function(response) {
+                USER.team = response;
+                $rootScope.$broadcast('user-updated');
+            });
+    };
 };
 
 angular.module('ncs').service('UserService', ['ApiFactory', '$window', '$rootScope', '$location', UserService]);

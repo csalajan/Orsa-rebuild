@@ -268,11 +268,11 @@ Sends a POST request to the back end
 
 
 
-<!-- Start app\src\accounts\teams\teams-controller.js -->
+<!-- Start app\src\accounts\teams\team-controller.js -->
 
 ## TeamsController()
 
-<!-- End app\src\accounts\teams\teams-controller.js -->
+<!-- End app\src\accounts\teams\team-controller.js -->
 
 
 

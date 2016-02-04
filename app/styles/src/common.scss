@@ -2259,9 +2259,7 @@ th {
 .table > tbody + tbody {
   border-top: 2px solid #dddddd;
 }
-.table .table {
-  background-color: #ffffff;
-}
+
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
 .table-condensed > tfoot > tr > th,
@@ -5021,8 +5019,13 @@ a.thumbnail.active {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #ffffff;
   border: 1px solid #dddddd;
+}
+.list-group-item-borderless {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
 }
 .list-group-item:first-child {
   border-top-right-radius: 4px;

@@ -11,6 +11,10 @@ describe('Navigation Service', function() {
         {
             name: 'tournaments',
             url: '/tournaments'
+        },
+        {
+            name: 'teams',
+            url: '/teams'
         }
     ];
 

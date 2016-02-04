@@ -1,0 +1,47 @@
+<section class="page">
+    <div ng-switch="user.team || '_undefined'">
+        <div ng-switch-default>
+            <div team-nav></div>
+            <h1 class="page-title">{{user.team.name}}</h1>
+
+            <div class="profile-basics row">
+                <div class="col-md-8">
+                    <table class="table horizontal">
+                        <tbody>
+                        <tr>
+                            <th class="title">Team Leader:</th>
+                            <td>{{user.team.leader.username}}</td>
+                        </tr>
+                        <tr>
+                            <th class="title">Members:</th>
+                            <td>
+                                <ul class="list-group">
+                                    <li class="list-group-item-borderless" ng-repeat="member in user.team.members">{{member.username}}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="details col-md-4">
+                    <img src="http://www.nexientchampionshipseries.com/theme/user.png" alt="Thef">
+
+                    <div class="actions">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-switch-when="_undefined">
+            <h1 class="page-title">Team</h1>
+            <p>You do not currently belong to a team.</p>
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <a href="" class="btn btn-default">Create Team</a>
+                    <a href="" class="btn btn-default">Join Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

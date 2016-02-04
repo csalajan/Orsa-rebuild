@@ -27,7 +27,15 @@ module.exports.policies = {
   ***************************************************************************/
 
    '*': true,
-  AdminController: ['isAuthorized', 'isAdmin']
+  AdminController: ['isAuthorized', 'isAdmin'],
+  TeamsController: {
+    '*': true,
+    join: 'isAuthorized'
+  },
+  UsersController: {
+    '*': true,
+    team: 'isAuthorized'
+  }
   //'*': [ 'passport' ]
 
   /***************************************************************************

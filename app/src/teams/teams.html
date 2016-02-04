@@ -1,0 +1,19 @@
+<section class="page">
+    <h1 class="page-title">Teams</h1>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Leader</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="team in teams">
+                <td>{{team.name}}</td>
+                <td>{{team.leader.username}}</td>
+                <td><a href="" class="btn btn-sm btn-default">Apply</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
