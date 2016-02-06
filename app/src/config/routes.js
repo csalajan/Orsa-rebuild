@@ -16,6 +16,10 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
             templateUrl: COMMON.VIEW_PATH + '/accounts/profile/profile.html',
             controller: 'ProfileController'
         })
+        .when('/edit-profile', {
+            templateUrl: COMMON.VIEW_PATH + '/accounts/profile/edit-profile.html',
+            controller: 'EditProfileController'
+        })
         .when('/messages', {
             templateUrl: COMMON.VIEW_PATH + '/accounts/messages/messages.html',
             controller: 'MessagesController'

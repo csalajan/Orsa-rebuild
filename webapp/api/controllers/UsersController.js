@@ -19,7 +19,11 @@ module.exports = {
     });
   },
   update: function(req, res) {
-
+    Users.update({id: req.token.id}, req.allParams()).exec(function(err, user) {
+      if (!err) {
+        res.json({user: user[0]});
+      }
+    });
   },
   team: function(req, res) {
     Users.findOne(req.token.id).exec(function(err, user) {

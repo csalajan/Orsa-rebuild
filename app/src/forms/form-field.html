@@ -1,0 +1,30 @@
+<div class="form-group">
+    <label for="{{name}}" class="col-sm-3 control-label">{{label}}</label>
+    <div class="col-sm-9">
+        <div ng-switch="type">
+            <div ng-switch-when="textarea">
+                <textarea ng-model="value" required="{{required}}" ng-required="required"></textarea>
+            </div>
+            <div ng-switch-when="select">
+                <select
+                    id="{{name}}"
+                    name="{{name}}"
+                    ng-model="value[name]"
+                    ng-required="required"
+                    ng-options="item.name as item.name for item in items"></select>
+            </div>
+            <div ng-switch-default>
+                <input
+                    id="{{name}}"
+                    name="{{name}}"
+                    type="{{type}}"
+                    ng-model="value[name]"
+                    ng-required="required" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-messages="formName[name].$error" class="help-block text-right">
+    <p ng-message="required">{{label}} is required</p>
+</div>

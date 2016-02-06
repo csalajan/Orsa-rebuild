@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th class="title">Birthdate:</th>
-                    <td>{{user.birthdate}}</td>
+                    <td>{{user.birthdate | date : 'MMM dd, yyyy' : 'UTC'}}</td>
                 </tr>
                 <tr>
                     <th class="title">Occupation:</th>
@@ -77,7 +77,7 @@
                     </tr>
                     <tr>
                         <th class="title">Skype:</th>
-                        <td><a href="skype:35?" target="_blank">{{user.skype}}</a></td>
+                        <td><a href="skype:{{user.skype}}?add" target="_blank">{{user.skype}}</a></td>
                     </tr>
                     </tbody>
                 </table>

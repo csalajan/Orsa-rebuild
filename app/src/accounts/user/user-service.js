@@ -50,6 +50,17 @@ var UserService = function(ApiFactory, $window, $rootScope, $location) {
                 $rootScope.$broadcast('user-updated');
             });
     };
+
+    this.updateUser = function(user) {
+        return ApiFactory.postData('/users/update', user)
+            .then(function(response) {
+                if (response.user) {
+                    USER = response.user;
+
+                    $rootScope.$broadcast('user-login');
+                }
+            });
+    };
 };
 
 angular.module('ncs').service('UserService', ['ApiFactory', '$window', '$rootScope', '$location', UserService]);
