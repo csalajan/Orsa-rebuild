@@ -57,17 +57,17 @@ module.exports = function(config) {
       ],
       check: {
         global: {
-          statements: 30,
-          branches: 30,
-          functions: 30,
-          lines: 30
+          statements: 75,
+          branches: 75,
+          functions: 75,
+          lines: 75
         }
       },
       watermarks: {
         statements: [50, 75],
         branches: [50, 75],
-        functions: [51, 76],
-        lines: [50, 75],
+        functions: [50, 75],
+        lines: [50, 75]
       }
     },
 
