@@ -1,3 +1,7 @@
-/**
- * Created by Craig on 2/6/2016.
- */
+var gulp = require('gulp');
+var del = require('del');
+var config = require('../../config').clean;
+
+gulp.task('clean', function() {
+    return del(config.files);
+});

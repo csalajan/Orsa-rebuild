@@ -16,6 +16,11 @@ module.exports = {
             destination: 'documentation'
         }
     },
+    clean: {
+        files: [
+            'build/development/**/*'
+        ]
+    },
     api: {
         files: [
             'webapp/**/*',
@@ -62,6 +67,12 @@ module.exports = {
         destination: development + '/views',
         files: [
             'app/src/**/*.html'
+        ]
+    },
+    images: {
+        destination: development + '/img',
+        files: [
+            'app/images/*.*'
         ]
     },
     karma: {

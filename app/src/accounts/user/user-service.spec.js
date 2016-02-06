@@ -82,4 +82,66 @@ describe('User Service', function() {
         });
     });
 
+    describe('Get User Team', function() {
+
+        beforeEach(function(done) {
+            $http.when('POST', '/api/auth/login').respond({status: 200, user: user, token: 'token'});
+            userService.login('test', 'test');
+
+            $rootScope.$on('user-login', function() {
+                setTimeout(done, 0);
+            });
+
+            $http.flush();
+        });
+
+        it('returns user team information', function(done) {
+            $http.expectGET('/api/users/team').respond(200, {name:'test team'});
+            userService.getUserTeam();
+
+            $rootScope.$on('user-updated', function() {
+                expect(userService.getUser().team.name).toEqual('test team');
+                done();
+            });
+
+            $http.flush();
+        });
+    });
+
+    describe('Update User', function() {
+
+        beforeEach(function(done) {
+            $http.when('POST', '/api/auth/login').respond({status: 200, user: user, token: 'token'});
+            userService.login('test', 'test');
+
+            $rootScope.$on('user-login', function() {
+                setTimeout(done, 0);
+            });
+
+            $http.flush();
+        });
+
+        it ('Updates User Data', function(done) {
+
+            $http.expectPOST('/api/users/update', {username: 'Test', skype: '123'}).respond({user: {username: 'Test', skype: '123'}});
+            user.skype = '123';
+            userService.updateUser(user);
+
+            $rootScope.$on('user-login', function() {
+                expect(userService.getUser().skype).toEqual('123');
+                done();
+            });
+
+            $http.flush();
+        });
+
+        it("Doesn't update user", function() {
+            $http.expectPOST('/api/users/update', {username: 'Test', skype: '123'}).respond(200, {});
+            user.skype = '123';
+            userService.updateUser(user);
+
+            $http.flush();
+        });
+    });
+
 });
