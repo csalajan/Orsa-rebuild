@@ -2,11 +2,22 @@ var LoaderDirective = function(common) {
     return {
         templateUrl: common.VIEW_PATH + "/loader/loader.html",
         scope: {
-            watch: '='
+            watch: '=',
+            page: '@'
         },
         link: function(scope) {
+            scope.display = true;
+
             scope.isEmpty = function() {
-                return angular.equals(scope.watch, {});
+                if(!angular.equals(scope.watch, {})) {
+                    angular.element(document.querySelector('#'+scope.page+'-loader-wrapper')).addClass('loaded');
+                    setTimeout(function() {
+                        scope.display = false;
+                        //angular.element(document.querySelector('#'+scope.page+'-loader-wrapper')).removeClass('loaded');
+                    },1000);
+                }
+
+                return scope.display;
             };
         }
     };

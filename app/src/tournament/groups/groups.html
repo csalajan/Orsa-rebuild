@@ -2,7 +2,7 @@
     <div tournament-navigation tournament="tournament"></div>
     <h1 class="page-title">{{tournament.name}} - Groups</h1>
 
-    <div loader watch="groups"></div>
+    <div loader page="groups" watch="groups"></div>
 
     <div class="group col-sm-5 col-sm-offset-1" ng-repeat="group in groups">
         <h3>{{group.name}}</h3>

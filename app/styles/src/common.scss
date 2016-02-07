@@ -6594,9 +6594,11 @@ a:hover {
   text-transform: uppercase;
 }
 .page {
+  position: relative;
   margin-bottom: 20px;
   padding: 20px;
   background-color: #111214;
+  overflow: hidden;
 }
 .alert {
   border-radius: 0px;
@@ -6886,4 +6888,10 @@ textarea.model-search-box input {
 .bootstrap-datetimepicker-widget td.active,
 .bootstrap-datetimepicker-widget td.active:hover {
   background-color: #00afff !important;
+}
+
+.widget {
+  min-height: 50px;
+  position: relative;
+  overflow: hidden;
 }
