@@ -9,11 +9,10 @@ var LoaderDirective = function(common) {
             scope.display = true;
 
             scope.isEmpty = function() {
-                if(!angular.equals(scope.watch, {})) {
+                if(!angular.equals(scope.watch, {}) && scope.display) {
                     angular.element(document.querySelector('#'+scope.page+'-loader-wrapper')).addClass('loaded');
                     setTimeout(function() {
                         scope.display = false;
-                        //angular.element(document.querySelector('#'+scope.page+'-loader-wrapper')).removeClass('loaded');
                     },1000);
                 }
 
