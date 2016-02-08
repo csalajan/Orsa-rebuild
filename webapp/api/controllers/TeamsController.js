@@ -15,6 +15,15 @@ module.exports = {
       }
     });
   },
+  find: function(req, res) {
+    Team.findOne(req.param('id')).populate('leader').populate('members').exec(function(err, team) {
+      if (!err) {
+        res.json(team);
+      } else {
+        req.json(err);
+      }
+    });
+  },
   join: function(req, res) {
     Users.find(req.token.id).exec(function(err, user) {
       if (!err) {

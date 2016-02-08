@@ -28,8 +28,7 @@ var Toornament = {
 
     var result = url.format({
       protocol: (this.secure) ? 'https:' : 'http:',
-      host: this.host + (ignorePath ? "" : this.path) + options.path,
-
+      host: this.host + (ignorePath ? "" : this.path) + options.path
     });
 
     return result;

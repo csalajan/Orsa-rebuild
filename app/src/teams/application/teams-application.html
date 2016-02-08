@@ -1,0 +1,15 @@
+<section class="page page-team-application">
+    <h1 class="page-title">{{team.name}} Application</h1>
+
+    <div loader page="application" watch="team"></div>
+    <form name="application" ng-submit="sendApplication(applicant)">
+        <div class="row">
+            <div class="col-sm-6">
+                <div form-field model="applicant" type="text" name="position" label="Position" required="false"></div>
+            </div>
+            <div class="col-sm-6">
+                <div form-field model="applicant" type="text" name="position" label="Position" required="false"></div>
+            </div>
+        </div>
+    </form>
+</section>

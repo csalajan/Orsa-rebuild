@@ -6599,6 +6599,7 @@ a:hover {
   padding: 20px;
   background-color: #111214;
   overflow: hidden;
+  min-height: 300px;
 }
 .alert {
   border-radius: 0px;
@@ -6891,7 +6892,7 @@ textarea.model-search-box input {
 }
 
 .widget {
-  min-height: 50px;
+  min-height: 100px;
   position: relative;
   overflow: hidden;
 }
