@@ -1,7 +1,7 @@
 var build = 'build';
 var development = 'build/development';
 var production = 'build/production';
-var root = 'C:\\Users\\Craig\\projects\\tournament\\';
+var root = process.cwd() + '/';
 
 module.exports = {
     development: {
