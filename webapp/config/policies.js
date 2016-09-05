@@ -36,6 +36,10 @@ module.exports.policies = {
     '*': true,
     team: 'isAuthorized',
     update: 'isAuthorized'
+  },
+  SeasonController: {
+    '*': true,
+    register: 'isAuthorized'
   }
   //'*': [ 'passport' ]
 

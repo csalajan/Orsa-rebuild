@@ -6,8 +6,8 @@ var NavigationService = function() {
                 url: '/'
             },
             {
-                name: 'tournaments',
-                url: '/tournaments'
+                name: 'seasons',
+                url: '/seasons'
             },
             {
                 name: 'teams',

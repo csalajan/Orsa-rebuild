@@ -1,4 +1,4 @@
-var MatchController = function($scope, $routeParams, TournamentService) {
+var MatchController = function($scope, $routeParams, SeasonService) {
     $scope.matchResult = {
         1: 'Victory',
         2: 'Draw',
@@ -11,7 +11,7 @@ var MatchController = function($scope, $routeParams, TournamentService) {
         "one": "Best of 1"
     };
 
-    $scope.match = TournamentService.getMatchDetails($routeParams.id);
+    $scope.match = SeasonService.getMatchDetails($routeParams.id);
 };
 
-angular.module('ncs').controller('MatchController', ['$scope', '$routeParams', 'TournamentService', MatchController]);
+angular.module('ncs').controller('MatchController', ['$scope', '$routeParams', 'SeasonService', MatchController]);

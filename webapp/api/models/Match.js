@@ -15,6 +15,9 @@ module.exports = {
     tournament: {
       model: 'Tournament'
     },
+    season: {
+      model: 'Season'
+    },
     stage: {
       type: 'integer'
     },
@@ -32,7 +35,7 @@ module.exports = {
       type: 'text'
     },
     opponents: {
-      collection: 'Users',
+      collection: 'Team',
       via: 'id'
     }
   }

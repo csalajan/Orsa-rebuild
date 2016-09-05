@@ -1,15 +1,16 @@
-var LatestMatchesDirective = function(common, TournamentService) {
+var LatestMatchesDirective = function(common, SeasonService) {
     return {
         templateUrl: common.VIEW_PATH + '/tournament/matches/latest-matches.html',
         link: function(scope) {
             scope.latest = {};
 
             scope.$on('matches-updated', function() {
-                scope.latest = TournamentService.getLatestMatches();
+                scope.latest = SeasonService.getLatestMatches();
+                console.log(scope.latest);
             });
 
         }
     };
 };
 
-angular.module('ncs').directive('latestMatches', ['COMMON', 'TournamentService', LatestMatchesDirective]);
+angular.module('ncs').directive('latestMatches', ['COMMON', 'SeasonService', LatestMatchesDirective]);

@@ -28,6 +28,10 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
             templateUrl: COMMON.VIEW_PATH + '/accounts/friends/friends.html',
             controller: 'FriendsController'
         })
+        .when('/seasons', {
+            templateUrl: COMMON.VIEW_PATH + '/season/seasons.html',
+            controller: 'SeasonsController'
+        })
         .when('/team', {
             templateUrl: COMMON.VIEW_PATH + '/accounts/teams/team.html',
             controller: 'TeamController'

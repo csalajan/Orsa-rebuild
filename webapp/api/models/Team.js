@@ -18,6 +18,13 @@ module.exports = {
     members: {
       collection: 'Users',
       via: 'id'
+    },
+    league: {
+      collection: 'Season',
+      via: 'teams'
+    },
+    matches: {
+      model: 'Match'
     }
   },
   afterCreate: function(team, next) {

@@ -22,11 +22,9 @@ module.exports = {
     });
   },
   matches: function(req, res) {
-    Toornament.getMatches(function(err, data) {
+    Tournament.find().populate('matches').exec(function(err, data) {
       if (!err) {
         res.json(data);
-      } else {
-        res.json(err);
       }
     });
   },

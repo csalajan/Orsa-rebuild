@@ -4,5 +4,11 @@ module.exports = [
     models: {
       leader: {username: 'Thef'}
     }
+  },
+  {
+    name: 'Rocket Vision',
+    models: {
+      leader: {username: 'Thefx'}
+    }
   }
 ];

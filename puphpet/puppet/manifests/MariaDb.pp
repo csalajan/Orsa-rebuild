@@ -33,8 +33,8 @@ class puphpet_mariadb (
     $php_package = false
   }
 
-  $root_password = array_true($mysql['settings'], 'root_password') ? {
-    true    => $mysql['settings']['root_password'],
+  $root_password = array_true($mariadb['settings'], 'root_password') ? {
+    true    => $mariadb['settings']['root_password'],
     default => $mysql::params::root_password
   }
 
@@ -210,6 +210,8 @@ class puphpet_mariadb (
     } elsif $::lsbdistcodename == 'lucid' or $::lsbdistcodename == 'squeeze' {
       $php_module = 'mysql'
     } elsif $::osfamily == 'debian' and $php['settings']['version'] in ['7.0', '70'] {
+      $php_module = 'mysql'
+    } elsif $::operatingsystem == 'ubuntu' and $php['settings']['version'] in ['5.6', '56'] {
       $php_module = 'mysql'
     } else {
       $php_module = 'mysqlnd'

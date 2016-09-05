@@ -1,0 +1,11 @@
+<section class="page page-tournaments">
+    <h1 class="page-title">Active Seasons</h1>
+
+    <ul class="list-unstyled">
+        <li ng-repeat="season in seasons">
+            <a href="/season/{{season.id}}">
+                <div>{{season.name}}</div>
+            </a>
+        </li>
+    </ul>
+</section>
