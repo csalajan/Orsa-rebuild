@@ -1,10 +1,19 @@
 module.exports = {
   index: function(req, res) {
-    Season.find().exec(function(err, response) {
+    Season.find().where({
+      or: [
+        {
+          status: 'active'
+        },
+        {
+          status: 'open'
+        }
+      ]
+    }).exec(function(err, response) {
       if(!err) {
         res.json(response);
       }
-    })
+    });
   },
   matches: function(req, res) {
     Match.find().populate('season', {where: {

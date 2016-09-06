@@ -17,6 +17,25 @@ module.exports = {
       collection: 'Team',
       via: 'league',
       dominant: true
+    },
+    description: {
+      type: 'text'
+    },
+    rules: {
+      type: 'text'
+    },
+    prizes: {
+      type: 'text'
+    },
+    teamSizeMin: {
+      type: 'integer'
+    },
+    teamSizeMax: {
+      type: 'integer'
+    },
+    matchFormat: {
+      type: 'string',
+      enum: ['bo1', 'bo3', 'bo5', 'bo7']
     }
   }
 };

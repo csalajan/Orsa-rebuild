@@ -7,9 +7,8 @@ var PageService = function(ApiFactory, $q) {
             status: 200,
             data: [
                 {
-                    title: "ALT League - It's Gonna be Big!",
-                    link: "https://www.toornament.com/tournaments/5643847f150ba00d568b4573/registration/new",
-                    image: "http://www.nexientchampionshipseries.com/uploads/slides/1_image.png"
+                    title: "ORSE - It's Gonna be Big!",
+                    image: "img/RLBanner.jpg"
                 }
             ]
         });

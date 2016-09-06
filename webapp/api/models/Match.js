@@ -37,6 +37,9 @@ module.exports = {
     opponents: {
       collection: 'Team',
       via: 'id'
+    },
+    result: {
+      model: 'Result'
     }
   }
 };
