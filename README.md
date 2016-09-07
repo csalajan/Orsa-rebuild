@@ -1,3 +1,5 @@
+[![Build Status](http://jenkins.teragontech.com/job/orsa/badge/icon?style=plastic)](http://jenkins.teragontech.com/job/orsa/)
+
 # Online Rocket Sports Association
 
 ## Setup
