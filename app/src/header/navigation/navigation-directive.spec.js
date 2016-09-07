@@ -6,8 +6,8 @@ var nav = [
         url: '/'
     },
     {
-        name: 'tournaments',
-        url: '/tournaments'
+        name: 'seasons',
+        url: '/seasons'
     },
     {
         name: 'teams',

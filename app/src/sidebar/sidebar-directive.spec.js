@@ -7,7 +7,12 @@ describe('Sidebar Directive', function() {
         $http,
         element;
 
-    beforeEach(angular.mock.module('ncs'));
+    var SeasonService = {
+        getActiveSeasons: jasmine.createSpy()
+    };
+    beforeEach(angular.mock.module('ncs', function($provide) {
+        $provide.value('SeasonService', SeasonService);
+    }));
 
     // Store references to $rootScope and $compile
     // so they are available to all tests in this describe block

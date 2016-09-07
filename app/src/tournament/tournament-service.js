@@ -8,7 +8,7 @@ var TournamentService = function($rootScope, ApiFactory) {
 
     ApiFactory.getData('/tournament/matches').then(function(data) {
         matches = data;
-        //$rootScope.$broadcast('matches-updated');
+        $rootScope.$broadcast('tournament-matches-updated');
     });
 
     this.getActiveTournaments = function() {

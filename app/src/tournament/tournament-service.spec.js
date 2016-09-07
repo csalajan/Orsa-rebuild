@@ -45,7 +45,7 @@ describe('Tournament Service', function() {
 
     describe('Latest Matches', function() {
         it('returns latest matches', function(done) {
-            $rootScope.$on('matches-updated', function() {
+            $rootScope.$on('tournament-matches-updated', function() {
                 var latest = tournamentService.getLatestMatches();
                 expect(latest[0]).toEqual(matches[1]);
                 done();
@@ -57,7 +57,7 @@ describe('Tournament Service', function() {
 
     describe('Upcoming Matches', function() {
         it('returns upcoming matches', function(done) {
-            $rootScope.$on('matches-updated', function() {
+            $rootScope.$on('tournament-matches-updated', function() {
                 var latest = tournamentService.getUpcomingMatches();
                 expect(latest[0]).toEqual(matches[0]);
                 done();
@@ -69,7 +69,7 @@ describe('Tournament Service', function() {
 
     describe('Match Details', function() {
         it('returns upcoming matches', function(done) {
-            $rootScope.$on('matches-updated', function() {
+            $rootScope.$on('tournament-matches-updated', function() {
                 var latest = tournamentService.getMatchDetails(1);
                 expect(latest).toEqual(matches[0]);
                 done();
