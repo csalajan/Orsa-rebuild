@@ -1,7 +1,7 @@
 module.exports = {
   attributes: {
-    result: {
-      model: 'Result'
+    match: {
+      model: 'Match'
     },
     home: {
       model: 'Team'

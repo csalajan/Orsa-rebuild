@@ -15,8 +15,8 @@ module.exports = {
     tournament: {
       model: 'Tournament'
     },
-    season: {
-      model: 'Season'
+    league: {
+      model: 'League'
     },
     stage: {
       type: 'integer'
@@ -38,8 +38,13 @@ module.exports = {
       collection: 'Team',
       via: 'id'
     },
-    result: {
-      model: 'Result'
+    games: {
+      collection: 'Game',
+      via: 'match',
+      dominant: true
+    },
+    winner: {
+      model: 'Team'
     }
   }
 };

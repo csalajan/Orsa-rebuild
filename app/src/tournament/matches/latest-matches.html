@@ -4,10 +4,12 @@
     <ul class="list-unstyled">
         <li ng-repeat="match in latest">
             <a href="/match/{{match.id}}">
-                <span class="blue-team" ng-class="(match.opponents[0].result == 1) ? 'winner' : 'loser'">{{match.opponents[0].name}}</span>
+                <span class="blue-team" ng-class="(match.opponents[0].id == match.winner) ? 'winner' : 'loser'">{{match.opponents[0].name}}</span>
                 <span> vs </span>
-                <span class="red-team" ng-class="(match.opponents[1].result == 1) ? 'winner' : 'loser'">{{match.opponents[1].name}}</span>
-                <div class="scores"><span class="blue-draw"><span class="draw">00</span>:<span class="draw">00</span></span></div>
+                <span class="red-team" ng-class="(match.opponents[1].id == match.winner) ? 'winner' : 'loser'">{{match.opponents[1].name}}</span>
+                <div>
+                    <small class="tournament">{{match.league.name}}</small>
+                </div>
             </a>
         </li>
     </ul>

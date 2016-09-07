@@ -16,12 +16,23 @@ module.exports = {
     });
   },
   matches: function(req, res) {
-    Match.find().populate('season', {where: {
+    League.find().populate('season', {where: {
       id: req.param('id')
-    }}).populate('opponents').exec(function(err, response) {
-      if (!err) {
-        return res.json(response);
-      }
+    }}).populate('matches').then(function(leagues) {
+
+      var matchIds = sails.util._.map(leagues, function(league) {
+            var ids = [];
+            league.matches.forEach(function(match) {
+              ids.push(match.id);
+            });
+            return ids;
+        });
+        var mergedMatchIds = [].concat.apply([], matchIds);
+        Match.find({
+          id: mergedMatchIds
+        }).populate('opponents').populate('league').exec(function(err, matches) {
+          res.json(matches);
+        })
     })
   },
   register: function(req, res) {

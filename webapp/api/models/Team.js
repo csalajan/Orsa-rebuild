@@ -20,7 +20,7 @@ module.exports = {
       via: 'id'
     },
     league: {
-      collection: 'Season',
+      collection: 'League',
       via: 'teams'
     },
     matches: {

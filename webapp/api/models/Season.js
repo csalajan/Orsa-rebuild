@@ -9,15 +9,6 @@ module.exports = {
       type: 'string',
       enum: ['open', 'active', 'closed']
     },
-    matches: {
-      collection: 'Match',
-      via: 'season'
-    },
-    teams: {
-      collection: 'Team',
-      via: 'league',
-      dominant: true
-    },
     description: {
       type: 'text'
     },

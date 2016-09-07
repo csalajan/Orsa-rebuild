@@ -4,7 +4,7 @@ module.exports = [
       team: {name: ['Nexient Gaming', 'Rocket Vision']}
     },
     models: {
-      season: {name: 'Season 3'}
+      league: {name: '3v3 PC League'}
     },
     status: 'pending'
   },
@@ -13,7 +13,8 @@ module.exports = [
       team: {name: ['Nexient Gaming', 'Rocket Vision']}
     },
     models: {
-      season: {name: 'Season 3'}
+      league: {name: '2v2 PC League'},
+      winner: {name: 'Nexient Gaming'}
     },
     status: 'complete'
   }
