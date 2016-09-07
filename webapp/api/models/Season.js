@@ -18,6 +18,10 @@ module.exports = {
     prizes: {
       type: 'text'
     },
+    leagues: {
+      collection: 'League',
+      via: 'season'
+    },
     teamSizeMin: {
       type: 'integer'
     },

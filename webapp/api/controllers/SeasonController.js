@@ -15,6 +15,13 @@ module.exports = {
       }
     });
   },
+  findOne: function(req, res) {
+    Season.findOne(req.param('id')).populate('leagues').exec(function(err, season) {
+      if (!err) {
+        res.json(season);
+      }
+    })
+  },
   matches: function(req, res) {
     League.find().populate('season', {where: {
       id: req.param('id')

@@ -1,0 +1,12 @@
+<section class="page page-league">
+    <div league-nav></div>
+    <h1 class="page-title">{{league.name}} Teams</h1>
+
+    <ul class="list-unstyled">
+        <li ng-repeat="team in league.teams">
+            <a href="/league/{{league.id}}">
+                <div>{{team.name}}</div>
+            </a>
+        </li>
+    </ul>
+</section>

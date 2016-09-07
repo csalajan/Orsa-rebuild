@@ -7,6 +7,13 @@
 
 
 
+<!-- Start app\src\accounts\index.js -->
+
+<!-- End app\src\accounts\index.js -->
+
+
+
+
 <!-- Start app\src\app\app-controller.js -->
 
 ## AppController()
@@ -50,6 +57,15 @@
 
 
 
+<!-- Start app\src\constants\TournamentConst.js -->
+
+## TournamentConst
+
+<!-- End app\src\constants\TournamentConst.js -->
+
+
+
+
 <!-- Start app\src\filters\raw-html-filter.js -->
 
 <!-- End app\src\filters\raw-html-filter.js -->
@@ -71,6 +87,15 @@
 ## EmailDirective()
 
 <!-- End app\src\forms\email-directive.js -->
+
+
+
+
+<!-- Start app\src\forms\form-field-directive.js -->
+
+## FormFieldDirective()
+
+<!-- End app\src\forms\form-field-directive.js -->
 
 
 
@@ -120,6 +145,15 @@
 
 
 
+<!-- Start app\src\loader\loader-directive.js -->
+
+## LoaderDirective()
+
+<!-- End app\src\loader\loader-directive.js -->
+
+
+
+
 <!-- Start app\src\sidebar\sidebar-directive.js -->
 
 ## SidebarDirective()
@@ -129,11 +163,79 @@
 
 
 
+<!-- Start app\src\season\season-controller.js -->
+
+## SeasonController()
+
+<!-- End app\src\season\season-controller.js -->
+
+
+
+
+<!-- Start app\src\season\season-service.js -->
+
+## SeasonService()
+
+Service for handling all tournament information.
+
+## getLatestMatches()
+
+Returns latest completed matches
+
+### Examples:
+
+    TournamentService.getLatestMatches()
+
+### Return:
+
+* **Array** array of latest matches
+
+<!-- End app\src\season\season-service.js -->
+
+
+
+
+<!-- Start app\src\season\seasons-controller.js -->
+
+## SeasonsController()
+
+<!-- End app\src\season\seasons-controller.js -->
+
+
+
+
 <!-- Start app\src\slider\slider-directive.js -->
 
 ## SliderDirective()
 
 <!-- End app\src\slider\slider-directive.js -->
+
+
+
+
+<!-- Start app\src\teams\teams-controller.js -->
+
+## TeamsController()
+
+<!-- End app\src\teams\teams-controller.js -->
+
+
+
+
+<!-- Start app\src\teams\teams-service.js -->
+
+## TeamsService()
+
+<!-- End app\src\teams\teams-service.js -->
+
+
+
+
+<!-- Start app\src\tournament\tournament-page-controller.js -->
+
+## TournamentPageController()
+
+<!-- End app\src\tournament\tournament-page-controller.js -->
 
 
 
@@ -154,9 +256,18 @@ Returns latest completed matches
 
 ### Return:
 
-* **Object** list of latest matches
+* **Array** array of latest matches
 
 <!-- End app\src\tournament\tournament-service.js -->
+
+
+
+
+<!-- Start app\src\tournament\tournaments-controller.js -->
+
+## TournamentsController()
+
+<!-- End app\src\tournament\tournaments-controller.js -->
 
 
 
@@ -250,6 +361,15 @@ Sends a POST request to the back end
 
 
 
+<!-- Start app\src\accounts\profile\edit-profile-controller.js -->
+
+## EditProfileController()
+
+<!-- End app\src\accounts\profile\edit-profile-controller.js -->
+
+
+
+
 <!-- Start app\src\accounts\profile\profile-controller.js -->
 
 ## ProfileController()
@@ -270,7 +390,7 @@ Sends a POST request to the back end
 
 <!-- Start app\src\accounts\teams\team-controller.js -->
 
-## TeamsController()
+## TeamController()
 
 <!-- End app\src\accounts\teams\team-controller.js -->
 
@@ -313,6 +433,24 @@ Sends a POST request to the back end
 
 
 
+<!-- Start app\src\teams\application\teams-application-controller.js -->
+
+## TeamsApplicationController()
+
+<!-- End app\src\teams\application\teams-application-controller.js -->
+
+
+
+
+<!-- Start app\src\tournament\brackets\bracket-controller.js -->
+
+## BracketController()
+
+<!-- End app\src\tournament\brackets\bracket-controller.js -->
+
+
+
+
 <!-- Start app\src\tournament\groups\groups-controller.js -->
 
 ## GroupsController()
@@ -345,4 +483,47 @@ Sends a POST request to the back end
 ## UpcomingMatchesDirective()
 
 <!-- End app\src\tournament\matches\upcoming-matches-directive.js -->
+
+
+
+
+<!-- Start app\src\tournament\navigation\tournament-navigation-directive.js -->
+
+## TournamentNavigationDirective()
+
+<!-- End app\src\tournament\navigation\tournament-navigation-directive.js -->
+
+
+
+
+<!-- Start app\src\tournament\participants\participants-controller.js -->
+
+<!-- End app\src\tournament\participants\participants-controller.js -->
+
+
+
+
+<!-- Start app\src\tournament\prizes\prizes-controller.js -->
+
+## PrizesController()
+
+<!-- End app\src\tournament\prizes\prizes-controller.js -->
+
+
+
+
+<!-- Start app\src\tournament\rules\rules-controller.js -->
+
+## RulesController()
+
+<!-- End app\src\tournament\rules\rules-controller.js -->
+
+
+
+
+<!-- Start app\src\accounts\teams\team-navigation\team-navigation-directive.js -->
+
+## TeamNavigationDirective()
+
+<!-- End app\src\accounts\teams\team-navigation\team-navigation-directive.js -->
 
