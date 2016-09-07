@@ -22,6 +22,13 @@ module.exports = {
       required: 'true',
       unique: true
     },
+    active: {
+      type: 'boolean',
+      defaultsTo: false
+    },
+    activationCode: {
+      type: 'string'
+    },
     isAdmin: {
       type: 'integer',
       defaultsTo: 0

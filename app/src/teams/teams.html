@@ -12,7 +12,7 @@
             <tr ng-repeat="team in teams">
                 <td>{{team.name}}</td>
                 <td>{{team.leader.username}}</td>
-                <td><a href="/teams/apply/{{team.id}}" class="btn btn-sm btn-default">Apply</a></td>
+                <td><a href="/teams/apply/{{team.id}}" ng-if="user" class="btn btn-sm btn-default">Apply</a></td>
             </tr>
         </tbody>
     </table>

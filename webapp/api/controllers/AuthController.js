@@ -34,6 +34,10 @@ module.exports = {
           return res.json(401, {err: 'invalid username or password'});
         }
 
+        if (!user.active) {
+          return res.json(401, {err: 'user account is not active'});
+        }
+
         Users.comparePassword(password, user, function (err, valid) {
           if (err) {
             return res.json(403, {err: 'forbidden'});
