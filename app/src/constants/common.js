@@ -1,5 +1,5 @@
 var common = {
-    "APP_NAME": "ALT League",
+    "APP_NAME": "ORSA - Online Rocket Sports Association",
     "VIEW_PATH": "src/app",
     "PROFILE": {
         "GENDERS": [
