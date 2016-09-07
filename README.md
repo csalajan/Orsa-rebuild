@@ -1,4 +1,4 @@
-# Nexient Championship Series
+# Online Rocket Sports Association
 
 ## Setup
 
