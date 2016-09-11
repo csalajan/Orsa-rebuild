@@ -25,6 +25,9 @@ module.exports = {
     },
     matches: {
       model: 'Match'
+    },
+    ranking: {
+      type: 'integer'
     }
   },
   afterCreate: function(team, next) {

@@ -1,12 +1,54 @@
 module.exports = [
   {
-    name: 'Nexient Gaming',
+    name: 'Team A',
     models: {
       leader: {username: 'Thef'}
     }
   },
   {
-    name: 'Rocket Vision',
+    name: 'Team B',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team C',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team D',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team E',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team F',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team G',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team H',
+    models: {
+      leader: {username: 'Thefx'}
+    }
+  },
+  {
+    name: 'Team I',
     models: {
       leader: {username: 'Thefx'}
     }
