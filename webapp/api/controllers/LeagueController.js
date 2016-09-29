@@ -18,8 +18,17 @@ module.exports = {
   start: function(req, res) {
     League.findOne(req.param('id')).populate('matches').populate('teams').exec(function(err, response) {
       if(!err) {
-        LeagueService.generateMatches(response);
-        res.json(200, 'matches created');
+        var matchIds = sails.util._.map(response.matches, function(match) {
+          return match.id
+        });
+        Match.find({
+          id: matchIds
+        }).populate('opponents').exec(function(err, matches) {
+          response.matches = matches;
+          LeagueService.generateMatches(response);
+          res.json(200, 'matches created');
+        })
+
       }
     })
   },

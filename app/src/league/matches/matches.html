@@ -1,0 +1,17 @@
+<section class="page page-league">
+    <div league-nav></div>
+    <h1 class="page-title">{{league.name}} Teams</h1>
+
+    <ul class="list-unstyled">
+        <li ng-repeat="match in matches">
+            <a href="/match/{{match.id}}">
+                <span class="blue-team">{{match.opponents[0].name}}</span>
+                <span> vs </span>
+                <span class="red-team">{{match.opponents[1].name}}</span>
+                <div>
+                    <small class="tournament">{{match.league.name}}</small>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>

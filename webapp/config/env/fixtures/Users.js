@@ -15,7 +15,8 @@ module.exports = [
     motherboard: 'Gigabyte',
     mouse: 'Razer Diamondback',
     keyboard: 'Logitech G510',
-    headset: 'Steelseries Siberia V2'
+    headset: 'Steelseries Siberia V2',
+    active: true
   },
   {
     username: 'Thefx',

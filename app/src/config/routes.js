@@ -28,6 +28,10 @@ angular.module('ncs').config(function($routeProvider, $locationProvider, COMMON,
             templateUrl: COMMON.VIEW_PATH + '/league/teams/teams.html',
             controller: 'LeagueTeamsController'
         })
+        .when('/league/:id/matches', {
+            templateUrl: COMMON.VIEW_PATH + '/league/matches/matches.html',
+            controller: 'LeagueMatchesController'
+        })
         .when('/messages', {
             templateUrl: COMMON.VIEW_PATH + '/accounts/messages/messages.html',
             controller: 'MessagesController'

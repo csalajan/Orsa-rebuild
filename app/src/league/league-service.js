@@ -12,6 +12,10 @@ var LeagueService = function($rootScope, ApiFactory) {
             return response;
         });
     };
+
+    this.getMatches = function(league) {
+        return ApiFactory.getData('/league/matches/'+league);
+    };
 };
 
 angular.module('ncs').service('LeagueService', ['$rootScope', 'ApiFactory', LeagueService]);
