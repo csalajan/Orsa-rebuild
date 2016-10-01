@@ -17,7 +17,8 @@ module.exports = {
     },
     members: {
       collection: 'Users',
-      via: 'id'
+      via: 'id',
+      dominant: true
     },
     league: {
       collection: 'League',
@@ -31,12 +32,10 @@ module.exports = {
     }
   },
   afterCreate: function(team, next) {
-    Users.findOne(team.leader).populate('team').exec(function(err, user) {
-        user.team = team.id;
+    Users.findOne(team.leader).exec(function(err, user) {
         Team.findOne(team.id).populate('members').exec(function(error, teamData) {
           teamData.members.add(user);
           teamData.save();
-          user.save();
           next();
         });
     });

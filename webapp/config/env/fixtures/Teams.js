@@ -9,6 +9,9 @@ module.exports = [
     name: 'Team B',
     models: {
       leader: {username: 'Thefx'}
+    },
+    collections: {
+      users: {username: [ 'zondebok', 'Thef' ]}
     }
   },
   {

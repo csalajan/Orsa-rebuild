@@ -97,8 +97,9 @@ module.exports = {
     matches: {
       model: 'Match'
     },
-    team: {
-      model: 'Team'
+    teams: {
+      collection: 'Team',
+      via: 'id'
     },
 
     encryptedPassword: {

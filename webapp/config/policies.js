@@ -34,7 +34,7 @@ module.exports.policies = {
   },
   UsersController: {
     '*': true,
-    team: 'isAuthorized',
+    teams: 'isAuthorized',
     update: 'isAuthorized'
   },
   SeasonController: {

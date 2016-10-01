@@ -43,10 +43,10 @@ var UserService = function(ApiFactory, $window, $rootScope, $location) {
             });
     };
 
-    this.getUserTeam = function() {
-        ApiFactory.getData('/users/team')
+    this.getUserTeams = function() {
+        ApiFactory.getData('/users/teams', user)
             .then(function(response) {
-                USER.team = response;
+                USER.teams = response;
                 $rootScope.$broadcast('user-updated');
             });
     };

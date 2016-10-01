@@ -1,7 +1,7 @@
 var TeamController = function($scope, UserService) {
     $scope.user =  UserService.getUser();
 
-    UserService.getUserTeam();
+    UserService.getUserTeams();
 
     $scope.$on('user-updated', function() {
         $scope.user = UserService.getUser();

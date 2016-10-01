@@ -34,6 +34,26 @@ module.exports = [
     motherboard: 'Gigabyte',
     mouse: 'Razer Diamondback',
     keyboard: 'Logitech G510',
-    headset: 'Steelseries Siberia V2'
+    headset: 'Steelseries Siberia V2',
+    active: true
+  },
+  {
+    username: 'zondebok',
+    email: 'rick.mogstad@gmail.com',
+    password: 'test123',
+    isAdmin: 1,
+    summoner: 'Zondebok',
+    name: 'Rick Mogstad',
+    gender: 'Male',
+    birthdate: '1981-09-23',
+    occupation: 'Software Developer',
+    cpu: 'Intel i7',
+    graphics: 'geForce 1080 GTX',
+    ram: '32gb',
+    motherboard: 'EVGA',
+    mouse: 'Logitech',
+    keyboard: 'Corsair Stealth RGB',
+    headset: 'Logitech G933',
+    active: true
   }
 ];

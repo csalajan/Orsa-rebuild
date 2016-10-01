@@ -25,16 +25,13 @@ module.exports = {
       }
     });
   },
-  team: function(req, res) {
-    Users.findOne(req.token.id).exec(function(err, user) {
+  teams: function(req, res) {
+    Users.findOne(req.token.id).populate('teams').exec(function(err, user) {
       if (!err) {
-        Team.findOne(user.team).populate('leader').populate('members').exec(function(error, team) {
-          if (!error) {
-            res.json(team);
-          }
-        });
+            res.json(user.teams());
       }
     });
+
   }
 };
 
